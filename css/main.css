@@ -238,7 +238,7 @@ button, input[type="submit"] {
     line-height: 1.5rem;
     font-weight: 600;
     text-transform: capitalize;
-    padding: 0.5rem 2.5rem;
+    padding: 0.75rem 2.5rem;
     background-color: var(--accent);
     border: none;
     cursor: pointer;
