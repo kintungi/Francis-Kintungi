@@ -3,24 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FRANCIS KINTUNGI-UI/UX Designer</title>
-    <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <title>Openup</title>
+    <link rel="stylesheet" type="text/css" href="css/work.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script defer src="script/main.js"></script>
+    <style>
+        .openup-gallery {
+           display: grid;
+           grid-template-columns: auto;
+           grid-template-rows: max-content;
+           overflow: hidden;
+
+        }
+    </style>
 </head>
 <body id="page">
-    <div class="wrapper no-hero contact">
-        <header class="contact">
+    <div class="wrapper">
+        <header>
             <div class="logo"><a href="index.html" title="Francis Kintungi">
                 <svg class="logo" width="328" height="28" viewBox="0 0 328 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0)">
                     <path d="M0 0.603905V27.3908H7.4641V17.1202H19.414V10.8025H7.4641V7.30619H20.233V0.603905H0Z" fill="white"/>
-                    <path d="M43.9078 24.6849L43.9004 24.5493L43.7574 21.1059C43.646 18.2453 43.2013 15.9908 40.1032 14.8296C41.3415 14.3248 42.3994 13.4545 43.138 12.3329C43.8767 11.2112 44.2615 9.89075 44.2421 8.54472C44.2421 4.36613 41.5971 0.598606 34.3527 0.598606H21.2842V27.3908H28.7483V18.1362H32.638C34.7259 18.1362 36.1483 18.5929 36.2597 21.6325L36.3711 24.6828C36.3544 25.6121 36.5336 26.5343 36.8968 27.3887H44.5827C44.1448 26.5546 43.9129 25.6264 43.9067 24.6828L43.9078 24.6849ZM33.232 12.6439H28.7514V6.47238H33.232C35.4323 6.47238 36.552 7.63781 36.552 9.56183C36.552 11.5155 35.4323 12.6439 33.232 12.6439Z" fill="white"/>
+                    <path d="M43.9078 24.6849L43.9005 24.5493L43.7575 21.1059C43.6461 18.2453 43.2014 15.9908 40.1032 14.8296C41.3415 14.3248 42.3994 13.4545 43.1381 12.3329C43.8767 11.2112 44.2616 9.89075 44.2421 8.54472C44.2421 4.36613 41.5971 0.598606 34.3527 0.598606H21.2842V27.3908H28.7483V18.1362H32.6381C34.7259 18.1362 36.1483 18.5929 36.2598 21.6325L36.3712 24.6828C36.3545 25.6121 36.5336 26.5343 36.8968 27.3887H44.5828C44.1448 26.5546 43.913 25.6264 43.9068 24.6828L43.9078 24.6849ZM33.2321 12.6439H28.7515V6.47238H33.2321C35.4324 6.47238 36.552 7.63781 36.552 9.56183C36.552 11.5155 35.4324 12.6439 33.2321 12.6439" fill="white"/>
                     <path d="M70.7418 26.3663L61.3297 0.603905H52.3685L43.9246 24.5482L42.9238 27.3897H50.5414L51.6621 23.8934H62.0761L63.1957 27.3897H71.116L70.7418 26.3663ZM53.6059 17.6881L55.5434 11.5155C55.9881 10.1223 56.4013 8.69729 56.8155 7.26381C57.1887 8.69729 57.6323 10.1244 58.0865 11.5155L60.0639 17.6881H53.6059Z" fill="white"/>
-                    <path d="M87.7514 0.603905V4.96685C87.7514 9.18571 87.7903 12.7964 87.9417 16.7822C86.7853 14.4513 85.3682 11.9637 84.2801 10.1223L78.6473 0.603905H70.7627V27.3908H77.8567V23.0268C77.8567 18.8153 77.8179 15.2375 77.6654 11.2506C78.7861 13.5487 79.9456 15.5023 81.327 17.8713L86.9671 27.3897H94.8392V0.603905H87.7514Z" fill="white"/>
-                    <path d="M114.847 16.8966C114.664 18.2401 113.986 19.4652 112.949 20.3295C111.912 21.1938 110.591 21.6342 109.247 21.5636C105.324 21.5636 103.385 18.7369 103.385 13.9989C103.385 9.30013 105.324 6.44165 109.247 6.44165C110.498 6.37168 111.734 6.74811 112.737 7.50487C113.741 8.26164 114.447 9.35038 114.734 10.58H122.272C121.303 3.80672 115.965 0.00423622 109.244 0.00423622C100.728 0.00423622 95.6213 5.42349 95.6213 13.9979C95.6213 22.5723 101.03 27.9989 109.244 27.9989C116.115 27.9989 121.453 24.0842 122.311 16.8956L114.847 16.8966Z" fill="white"/>
+                    <path d="M87.7515 0.603905V4.96685C87.7515 9.18571 87.7904 12.7964 87.9418 16.7822C86.7854 14.4513 85.3683 11.9637 84.2802 10.1223L78.6474 0.603905H70.7628V27.3908H77.8569V23.0268C77.8569 18.8153 77.818 15.2375 77.6655 11.2506C78.7862 13.5487 79.9458 15.5023 81.3272 17.8713L86.9673 27.3897H94.8393V0.603905H87.7515Z" fill="white"/>
+                    <path d="M114.847 16.8966C114.664 18.2401 113.986 19.4652 112.949 20.3295C111.912 21.1938 110.591 21.6342 109.247 21.5636C105.324 21.5636 103.385 18.7369 103.385 13.9989C103.385 9.30013 105.324 6.44165 109.247 6.44165C110.498 6.37168 111.734 6.74811 112.737 7.50487C113.741 8.26164 114.448 9.35038 114.734 10.58H122.273C121.303 3.80672 115.965 0.00423622 109.244 0.00423622C100.729 0.00423622 95.6215 5.42349 95.6215 13.9979C95.6215 22.5723 101.03 27.9989 109.244 27.9989C116.115 27.9989 121.454 24.0842 122.311 16.8956L114.847 16.8966Z" fill="white"/>
                     <path d="M130.527 0.603905H123.061V27.3908H130.527V0.603905Z" fill="white"/>
-                    <path d="M145.224 10.9561L143.024 10.58C140.37 10.1234 139.139 9.56289 139.139 7.94612C139.139 6.55396 140.18 5.7212 142.532 5.7212C145.447 5.7212 146.638 6.73831 146.757 8.8435H153.772C153.47 2.97609 149.442 0.00529671 142.418 0.00529671C134.954 0.00529671 131.519 3.65627 131.519 8.28303C131.519 13.1344 134.729 15.96 140.742 16.9369L142.83 17.2738C146.079 17.8035 147.009 18.3333 147.009 19.8674C147.009 21.3729 145.817 22.2767 143.276 22.2767C140.408 22.2767 138.351 21.7469 138.279 18.595H131.105C131.105 24.0863 134.951 28.0011 142.985 28.0011C149.923 28.0011 154.71 25.2877 154.71 19.3069C154.71 14.5276 151.723 12.0453 145.224 10.9572" fill="white"/>
+                    <path d="M145.224 10.9561L143.024 10.58C140.37 10.1234 139.139 9.56289 139.139 7.94612C139.139 6.55396 140.18 5.7212 142.532 5.7212C145.447 5.7212 146.638 6.73831 146.757 8.8435H153.772C153.47 2.97609 149.442 0.00529671 142.418 0.00529671C134.954 0.00529671 131.52 3.65627 131.52 8.28303C131.52 13.1344 134.729 15.96 140.742 16.9369L142.83 17.2738C146.079 17.8035 147.009 18.3333 147.009 19.8674C147.009 21.3729 145.817 22.2767 143.276 22.2767C140.408 22.2767 138.351 21.7469 138.279 18.595H131.105C131.105 24.0863 134.951 28.0011 142.985 28.0011C149.923 28.0011 154.71 25.2877 154.71 19.3069C154.71 14.5276 151.723 12.0453 145.224 10.9572" fill="white"/>
                     <path d="M177.937 11.5515L188.017 0.992734L188.391 0.600725H179.35L169.643 11.2083V0.600725H162.179V27.3866H169.643V19.718L172.669 16.6275L179.58 27.3866H188.39L188.016 26.8187L177.937 11.5515Z" fill="white"/>
                     <path d="M196.286 0.600725H188.811V27.3876H196.286V0.600725Z" fill="white"/>
                     <path d="M215.557 0.600725V4.96367C215.557 9.18253 215.597 12.7932 215.748 16.7801C214.592 14.4492 213.166 11.9616 212.087 10.1202L206.454 0.601785H198.569V27.3876H205.663V23.0247C205.663 18.8132 205.624 15.2354 205.473 11.2485C206.593 13.5465 207.752 15.5002 209.135 17.8692L214.777 27.3876H222.649V0.600725H215.557Z" fill="white"/>
@@ -35,8 +44,7 @@
                     <rect width="328" height="28" fill="white"/>
                     </clipPath>
                     </defs>
-                    </svg>
-                    
+                    </svg>                    
             </a></div>
             <nav id="nav" class="menu">
                 <svg id="close" class="menu-icon cancel" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,89 +57,67 @@
                     <li><a href="Projects.html">Projects</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-            </nav>   
+            </nav>      
             <div id="menu-button" class="menu-icon">
                 <div class="stroke center"></div>
             </div>
-                
         </header>
-        <main class="contact no-hero">
-            <article class="introduction frame">
-                <p>Feel free to get in touch, I would love
-                    to hear from you!
+        <main class="case-study openup">
+            <section class="gallery case-study openup">
+                <img src="images/openup2-m.png" alt="">
+                <img src="images/openup3-m.png" alt="">
+                <img src="images/openup4-m.png" alt="">
+                <img src="images/openup1-m.png" alt="">
+                <img src="images/openup5-m.png" alt="">
+                <img src="images/openup6-m.png" alt="">
+                <img src="images/openup7-m.png" alt="">
+                <img src="images/openup8-m.png" alt="">
+                <img src="images/openup10-m.png" alt="">
+                <img src="images/openup11-m.png" alt="">
+                <img src="images/openup12-m.png" alt="">
+                <img src="images/openup13-m.png" alt="">
+                <img src="images/openup14-m.png" alt="">
+                <img src="images/openup15-m.png" alt="">
+                <img src="images/openup16-m.png" alt="">
+            </section>
+            <article class="case-study openup">
+                <p> Holo is a clothing brand specialized 
+                    selling male clothes.
+                </p>
+                <p>The team at Holo wanted a logo and identity that was masculine 
+                    and bold yet simple and memorable. The result was a logo that 
+                    captured the name of the brand using capital H that is enclosed 
+                    between letter M and W which denote Men's and Wear respectively. 
+                    The logo itself is in a rectangular shape to reinforce masculinity 
+                    of the overall brand.
+                </p>
+                <p>I designed some collaterals including the shoe box, 
+                    stationery, signage and clothing tags.
                 </p>
             </article>
-            <section class="contact">
-                <!--<h2>Get in touch.</h2>-->
-                <div class="container">
-                    <section class="contacts">
-                        <div>
-                            <p class="mono">Call</p>
-                            <p><a href="tel:+255 692 098 805">+255 692 098 805</a></p>
-                        </div>
-                        <div>
-                            <p class="mono">Email</p>
-                        <p><a href="mailto:hello@franciskintungi.com"> hello@franciskintungi.com</a></p>
-                        </div>
-                    </section>
-                    <form action="" class="contact-form">
-                        <section class="select-input">
-                            <div class="inquiry">
-                                <p class="mono">Quick message</p>
-                                <div class="select">
-                                <p id="inquiry">Select inquiry</p>
-                                <svg id="drop" class="drop down" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11.115 12.885L18 19.755L24.885 12.885L27 15L18 24L9 15L11.115 12.885Z" fill="white"/>
-                                </svg>
-                                </div>
-                                </div>
-                                <ul id="options" class="options"
-                                ><li class="list-item">Let's start</li
-                                    ><li class="list-item">Let's go further</li
-                                    ><li class="list-item">Collab?</li
-                                    ><li class="list-item">Interview</li
-                                    ><li class="list-item">Invite</li
-                                    ></ul>
-                                <div id="inquiry-line" class="border-bottom line"></div>    
-                        </section>
-                        <div class="text-inputs">
-                            <div class="input-container name">
-                                     <div class="border-top line"></div>
-                                     <input type="text" name="full name" id="name" required/>
-                                     <label id="test" for="name">Full name</label>
-                                     <div class="border-bottom line"></div> 
-                            </div><!--name container-->
-                            <div class="input-container email">
-                                 <div class="border-top line"></div>
-                                 <input type="email" name="email address" id="email" required/> 
-                                 <label for="email">Email address</label>
-                                 <div class="border-bottom line"></div>
-                             </div><!--email-->
-                             <div class="input-container company">
-                                     <div class="border-top line"></div>
-                                     <input class="text" type="text" name="company name" id="company" required/> 
-                                     <label  for="company">Company name</label>
-                                     <div class="border-bottom line"></div>
-                            </div>
-                            <div class="textarea-container brief">
-                             <div class="border-top line"></div>
-                                 <textarea name="Project brief" id="brief" required></textarea>
-                                 <label for="brief">Project brief</label>
-                             <div class="border-bottom line"></div>
-                        </div><!--brief-->
-                      </div><!--text-inputs-->
-                        <button class="submit button">Submit</button>
-                    </form>
-                    <section class="map">
-                        <div class="address">
-                            <p class="mono">Visit</p>
-                            <p>Studio space</p>
-                            <p class="address">Tabata, Kisukuru 12122<br/>Dar es salaam, Tanzania. </p>
-                        </div>
-                        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4941.836653139945!2d39.17992427414554!3d-6.8174533451202715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x95e5d8bded93dbce!2sFrancis%20Kintungi%20Studios!5e0!3m2!1sen!2stz!4v1593675855087!5m2!1sen!2stz" width="312" height="384" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                    </section>
-                </div><!--closing contact details container-->
-            </section><!--closing contact section-->
+            <section class="other-projects case-study openup">
+                <p> See other projects</p>
+                <section class="other">
+                    <figure class="other">
+                        <a href="holo.html">
+                            <img src="images/openup-xs.png" alt="openup logo">
+                        </a>
+                        <figcaption>
+                            <p>Openup</p>
+                            <p>Brand identity design</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="other">
+                        <a href="francis.html">
+                            <img src="images/francis-xs.png" alt="Francis kintungi logo">
+                        </a>
+                        <figcaption>
+                            <p>Francis Kintungi</p>
+                            <p>Identity design, UI/UX design, branding</p>
+                        </figcaption>
+                    </figure>
+                </section>
+            </section>
         </main>
         <footer>
             <div class="social-icons">

@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Francis Kintungi</title>
     <link href="css/about.css" type="text/css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="css/about.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/contact.css">
     <script defer src="script/main.js"></script>
 </head>
 <body id="page">
-    <div class="wrapper hero">
+    <div class="wrapper">
         <header>
             <div class="logo"><a href="index.html" title="Francis Kintungi">
                 <svg class="logo" width="328" height="28" viewBox="0 0 328 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -83,7 +82,6 @@
                     don’t hesitate to contact me.
                 </p>
             </article>
-           <section class="contact">
             <form action="" class="contact-form frame contact">
                 <section class="select-input">
                     <div class="inquiry">
@@ -106,41 +104,32 @@
                 </section>
                 <div class="text-inputs">
                     <div class="input-container name">
-                        <div class="border-top line"></div>
-                        <div class="overlap">
-                            <input type="text" name="full name" id="name" required/>
-                            <label id="test" for="name">Full name</label>
-                        </div>
-                        <div class="border-bottom line"></div>
-                   </div><!--name container-->
-                   <div class="input-container email">
-                    <div class="border-top line"></div>
-                    <div class="overlap">
-                        <input type="email" name="email address" id="email" required/> 
-                        <label for="email">Email address</label>
+                             <div class="border-top line"></div>
+                             <input type="text" name="full name" id="name" required/>
+                             <label id="test" for="name">Full name</label>
+                             <div class="border-bottom line"></div> 
+                    </div><!--name container-->
+                    <div class="input-container email">
+                         <div class="border-top line"></div>
+                         <input type="email" name="email address" id="email" required/> 
+                         <label for="email">Email address</label>
+                         <div class="border-bottom line"></div>
+                     </div><!--email-->
+                     <div class="input-container company">
+                             <div class="border-top line"></div>
+                             <input class="text" type="text" name="company name" id="company" required/> 
+                             <label  for="company">Company name</label>
+                             <div class="border-bottom line"></div>
                     </div>
-                    <div class="border-bottom line"></div>
-                    </div><!--email-->
-                    <div class="input-container company">
-                        <div class="border-top line"></div>
-                        <div class="overlap">
-                            <input class="text" type="text" name="company name" id="company" required/> 
-                            <label  for="company">Company name</label>
-                        </div>
-                        <div class="border-bottom line"></div>
-                   </div>
-                   <div class="textarea-container brief">
-                    <div class="border-top line"></div>
-                    <div class="overlap">
-                        <label for="brief">Project brief</label>
-                        <textarea name="Project brief" id="brief" required></textarea>
-                    </div>
-                    <div class="border-bottom line"></div>
-               </div><!--brief-->
-             </div><!--text-inputs-->
+                    <div class="textarea-container brief">
+                     <div class="border-top line"></div>
+                         <textarea name="Project brief" id="brief" required></textarea>
+                         <label for="brief">Project brief</label>
+                     <div class="border-bottom line"></div>
+                </div><!--brief-->
+              </div><!--text-inputs-->
                 <button class="submit button">Submit</button>
             </form>
-           </section>
         </main>
         <footer>
             <div class="social-icons">
@@ -177,6 +166,6 @@
             </div>
             <p>&copy;<span id="year">2020</span> Francis kintungi</p>
         </footer>
-    </div>
+    </div><!--wrapper-->
 </body>
 </html>
