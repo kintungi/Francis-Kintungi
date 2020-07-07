@@ -69,7 +69,7 @@ nav.menu {
     color: black;
     display: grid;
     overflow: hidden;
-    transition: ease-out 500ms 0s all;
+    transition: ease-in 500ms 0s all;
     transform-origin: right center;
 }
 nav[class="menu show"] {/*Introduced a class which is used by js to expand the menu*/
