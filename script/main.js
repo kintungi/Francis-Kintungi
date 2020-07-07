@@ -64,6 +64,6 @@ const emailValue = document.getElementById("email").value;
 const companyValue = document.getElementById("company").value;
 const messageValue = document.getElementById("brief").value;
 }
-elForm.addEventListener("submit", collectData, false);
+// elForm.addEventListener("submit", collectData, false);
 console.log(elForm);
 console.log(formData)

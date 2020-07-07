@@ -1,0 +1,235 @@
+main article {
+    padding: 4rem 6.67%;
+}
+main article > p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.75rem;
+    line-height: 2.75rem;
+}
+section.contact {
+    padding: 2rem 6.67%;
+}
+section.contacts div:first-child {
+    margin-bottom: 1rem;
+}
+section.contact div.container {
+    grid-area: contact;
+    display: grid;
+    grid-template-areas: "contact"
+                         "form";
+    grid-template-columns: 100%;
+    grid-template-rows: max-content;
+    grid-row-gap: 8rem;
+
+}
+section.contact p:nth-child(2), section.contact p:nth-child(4) {
+    font-family: Poppins, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+section.contact a:link {
+    text-decoration: none;
+    color: white;
+}
+section.contact a:hover {
+    text-decoration: underline;
+}
+.select > p {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    margin-bottom: 1rem;
+}
+
+.select-input > div:last-child {
+    height: 0.25rem;
+    background-color: white;
+    transition: ease-in 300ms all;
+}
+.select-input > div.focus {
+    background-color: var(--accent);
+    transition: ease-in 300ms all;
+} 
+p.mono {
+    font-family: Basier Square Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: var(--dim);
+    margin-bottom: 0.25rem;
+}
+div.select {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+}
+div.select p {
+    width: max-content;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+div.select svg {
+    margin-right: 2rem;
+    margin-left: auto;
+    cursor: pointer;
+    transition: ease-in 300ms 0s all;
+}
+.up {
+    transform: rotateZ(180deg);
+}
+ul.options {
+    padding: 0;
+}
+.select-input ul.options {
+    height: 0px;
+    overflow-y: hidden;
+    transition: ease-in 300ms all;
+}
+.select-input ul.open {
+    height: 10rem;
+}
+.select-input .options li {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin-bottom: 0.25rem;
+    cursor: pointer;
+    list-style-type: none;
+}
+.select-input .options p:last-child {
+    margin-bottom: 2rem;
+}
+section.select-input {
+    margin-bottom: 4rem;
+}
+/*styling form text inputs*/
+.input-container {
+    display: grid;
+    grid-template-areas: "label";
+    grid-template-columns: 100%;
+    grid-template-rows: 5.25rem;
+    background-color: transparent;
+    margin-bottom: 0.5rem;   
+}
+.input-container > .line:first-child,
+.textarea-container > .line:first-child {
+    grid-area: label;
+    margin-bottom: auto;
+    margin-top: 0;
+    background-color: transparent;
+    height: 0.125rem;
+}
+.input-container > .line:last-child,
+.textarea-container > .line:last-child {
+    grid-area: label;
+    margin-bottom: 0;
+    margin-top: auto;
+    height: 0.125rem;
+    background-color: white;
+}
+input[type="text"], input[type="email"], textarea {
+    grid-area: label;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-family: var(--default);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: auto;
+    padding: 0;
+    height: 1.5rem;
+    outline: none;
+}
+
+/*styling textarea input*/
+.textarea-container {
+    display: grid;
+    grid-template-areas: "label";
+    grid-template-columns: 100%;
+    grid-template-rows: max-content;
+    background-color: transparent;
+    grid-template-rows: minmax(9.25rem, max-content);
+    margin-bottom: 2rem;
+}
+textarea {
+    margin-top: 2.5rem;
+    margin-bottom: auto;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 5.5rem;
+    max-height: 16rem;
+    padding: 0; 
+    resize: none;
+}
+textarea::-webkit-scrollbar {
+    background-color: transparent;
+}
+textarea::-webkit-scrollbar-thumb{
+    background-color: var(--accent);
+    width: 8px;
+    height: 16px;
+}
+label {
+    grid-area: label;
+    margin-top: 2.5rem;
+    margin-bottom: auto;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    cursor: text;
+    transition: ease-in 300ms all;
+}
+input:focus ~  label,
+textarea:focus ~  label, 
+input:valid ~  label,
+textarea:valid ~  label {
+    margin-top: 1.25rem;
+    margin-bottom: auto;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: var(--dim);
+}
+input:focus ~ .line:last-child,
+textarea:focus ~ .line:last-child,  
+input:valid ~ .line:last-child,
+textarea:valid ~ .line:last-child{
+    background-color: var(--accent);
+}
+/*map*/
+section.map p.address {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: basier square mono, monospace;
+}
+section.map p:nth-child(2) {
+    margin-bottom: 1rem;
+}
+section.map div.address {
+    margin-bottom: 4rem;
+}
+main.contact {
+    margin-bottom: 0;
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "contact";
+    grid-template-columns: 100%;
+    grid-template-rows: max-content;
+}
+header.contact {
+    grid-area: header;
+    position: static;
+    display: grid;
+    width: 100%;
+
+}
+section.map iframe {
+    width: 100%;
+    
+}

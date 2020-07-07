@@ -1,0 +1,255 @@
+:root {
+    /*brand colors*/
+    --black: #000000;
+    --lessblack: ;
+    --dim: #808080;
+    --white: #fff;
+    --lesswhite: #B2B2B2;
+    --accent: #00F7B5;
+    --warn: red;
+   /* --purple: #6600FF;*/
+    --darkpurple: #00F7B5;
+    /*Type scales*/
+    --body: 1rem;
+    --body-l: 1.25rem;
+    --caption: 0.875rem;
+    --small: 0.75rem;
+    --header-sm: 1.5rem;
+    --header-l: 2rem;
+    --header-xl: 6rem;
+    /*spacing*/
+    --xxs: 0.125rem;
+    --xs: 0.25rem;
+    --sm: 0.5rem;
+    --m: 1rem;
+    --l: 2rem;
+    --xl: 4rem;
+    --xxl: 6rem;
+    --xxxl: 8rem;
+    /*end of custom styles*/
+    --default: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    
+}
+body {
+    background-color: var(--black);
+    color: var(--white);
+    width: 100%;
+    margin: 0;
+    font-family: poppins, sans-serif;
+    overflow-y: scroll;
+    overflow-x: auto;
+}
+h2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+p, h1, h2, h3, h4, h5, h6 {margin: 0;
+}
+div.wrapper {
+    display: grid;
+    grid-template-areas: "header"
+                        "main"
+                        "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: max-content;
+    justify-content: center;
+    grid-gap: 2rem 0;
+}
+/*navigation*/
+nav.menu {
+    position: fixed;
+    grid-area: header-start / header-start / auto / header-end;
+    height: 100vh;
+    width: 0%;
+    background-color: white;
+    z-index: 105;
+    color: black;
+    display: grid;
+    overflow: hidden;
+    transition: ease-out 300ms 0s all;
+    transform-origin: right center;
+}
+nav[class="menu show"] {/*Introduced a class which is used by js to expand the menu*/
+    width: 100%;
+}
+nav[class="menu show"] > rect {/*changing the color of svg*/
+    fill: black;
+}
+nav ul, nav li {
+    padding: 0;
+    margin: 0;
+}
+ul.menu-list li {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    text-align: right;
+    margin-bottom: 2rem; 
+    list-style-type: none;
+    color: black;
+}
+.menu-list a:link {
+    text-decoration: none;  
+    color: black;
+}
+.menu-list a:active {
+    color: var(--accent);
+}
+.menu-list a:visited {
+    color: black;
+}
+.menu-list a:hover {
+    color: var(--dim);
+}
+nav svg[class~="cancel"] {
+    margin-top: 5.875rem;
+    margin-right: 4.44%;
+    margin-left: auto;
+    display: none;
+}
+
+nav ul.menu-list {
+    margin-right: 17.78vw;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: 10vh;
+}
+header {
+    position: static;
+    grid-area: header;
+    display: grid;
+    width: 100%;
+}
+div.logo {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    justify-self: center;
+    z-index: 100;
+    width: 91.12%;
+    height: auto;
+}
+svg.logo {
+    width: 100%;
+    height: auto;
+}
+/*responsive navbar*/
+div.menu-icon {
+    display: grid;
+    place-items: center;
+    height: 22px;
+    width: 24px;
+    cursor: pointer;
+    margin: 0 4.44% 2rem auto;
+    z-index: 120;
+}
+.stroke {
+    height: 2px;
+    width: 24px;
+    background-color: black;
+    transition: ease-in 300ms all;
+}
+.stroke::before, .stroke::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 24px;
+    background-color: black;
+    color: white;
+    transition: ease-in 300ms all;
+}
+.stroke::before {
+    transform: translateY(-8px);
+}
+.stroke::after {
+    transform: translateY(8px);
+    width: 18px;
+}
+.tapped .stroke {
+    background-color: transparent;
+
+}
+.tapped .stroke::before {
+    transform: rotate(45deg);
+    transform-origin: center;
+    background-color: black;
+}
+.tapped .stroke::after {
+    transform: rotate(-45deg);
+    transform-origin: center;
+    background-color: black;
+    width: 24px;
+}
+/*old nav
+svg.menu-icon {
+    margin: 0 4.44% 2rem auto;
+    z-index: 120;
+    width: 1.5rem;
+    height: 1.375rem;
+    cursor: pointer;
+    transition: ease-in 300ms all;
+    display: grid;
+    justify-content: center;
+}
+svg.tapped .top {
+    transform: rotate(45deg);
+    transform-origin: top left;
+    fill: black;
+    transition: ease-in 300ms all;
+    justify-self: auto;
+} 
+svg.tapped .bottom {
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+    fill: black;
+    transition: ease-in 300ms all;
+    margin: auto;
+}
+svg.tapped .center {
+    opacity: 0;
+    transition: ease-in 300ms all;
+}*/
+footer {
+    display: grid;
+    grid-row-gap: 1rem;
+    justify-items: center;
+    color: var(--dim);
+    font-size: 0.875rem;
+    padding: 2rem 0;
+}
+footer .social-icons {
+  display: grid;
+  grid-template-columns: repeat(6, max-content);
+  grid-column-gap: 1rem; 
+  align-items: center;
+}
+footer .social-icons path {
+    fill: var(--dim);
+}
+footer .social-icons a:hover  path {/*social icons do not change color, I have to fix this*/
+    fill: var(--accent);
+}
+/*components*/
+button, input[type="submit"] {
+    line-height: 1.5rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 0.5rem 2.5rem;
+    background-color: var(--accent);
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: black;
+    font-size: 1rem;
+}
+button:hover {
+    opacity: 0.8;
+}
+button:active {
+    background-color: var(--white);
+    color: black;
+}
