@@ -119,7 +119,7 @@ nav ul.menu-list {
     margin-bottom: 10vh;
 }
 header {
-    position: static;
+    position: fixed;
     grid-area: header;
     display: grid;
     width: 100%;
