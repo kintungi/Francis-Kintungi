@@ -50,7 +50,6 @@ section.contact a:hover {
 }
 .select-input > div.focus {
     background-color: var(--accent);
-    transition: ease-in 300ms all;
 } 
 p.mono {
     font-family: Basier Square Mono;
