@@ -5,7 +5,7 @@
     --dim: #808080;
     --white: #fff;
     --lesswhite: #B2B2B2;
-    --accent: #6600FF;
+    --accent: #3900E6;
     --warn: red;
    /* --purple: #6600FF;*/
     --darkpurple: #00F7B5;
@@ -27,7 +27,7 @@
     --xxl: 6rem;
     --xxxl: 8rem;
     /*end of custom styles*/
-    --default: poppins, sans-serif;
+    --default: 'Poppins', sans-serif;
     box-sizing: border-box;
     
 }
@@ -69,7 +69,7 @@ nav.menu {
     color: black;
     display: grid;
     overflow: hidden;
-    transition: ease-out 500ms 0s all;
+    transition: ease-out 300ms 0s all;
     transform-origin: right center;
 }
 nav[class="menu show"] {/*Introduced a class which is used by js to expand the menu*/
@@ -94,7 +94,7 @@ ul.menu-list li {
 }
 .menu-list a:link {
     text-decoration: none;  
-    color: white;
+    color: black;
 }
 .menu-list a:active {
     color: var(--accent);
@@ -125,12 +125,12 @@ header {
     width: 100%;
 }
 div.logo {
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin: 2rem 4.44%;
     justify-self: center;
     z-index: 100;
     width: 91.12%;
     height: auto;
+    position: fixed;;
 }
 svg.logo {
     width: 100%;
@@ -143,8 +143,11 @@ div.menu-icon {
     height: 22px;
     width: 24px;
     cursor: pointer;
-    margin: 0 4.44% 2rem auto;
+    /* margin: 0 4.44% 2rem auto; */
+    top: 5.75rem;
+    right:  4.44%;
     z-index: 120;
+    position: fixed;
 }
 .stroke {
     height: 2px;
@@ -220,6 +223,7 @@ footer {
     color: var(--dim);
     font-size: 0.875rem;
     padding: 2rem 0;
+    grid-area: footer;
 }
 footer .social-icons {
   display: grid;
@@ -238,17 +242,23 @@ button, input[type="submit"] {
     line-height: 1.5rem;
     font-weight: 600;
     text-transform: capitalize;
-    padding: 0.5rem 2.5rem;
+    padding: 0.75rem 2.5rem;
     background-color: var(--accent);
     border: none;
     cursor: pointer;
     outline: none;
-    color: black;
+    color: white;
+    font-size: 1rem;
+    display: grid;
+    place-items: center;
 }
 button:hover {
-    background-color: var(--darkpurple);
+    opacity: 0.8;
 }
 button:active {
     background-color: var(--white);
     color: black;
+}
+button:active svg > path {
+    fill: black;
 }
