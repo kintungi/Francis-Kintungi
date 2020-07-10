@@ -101,7 +101,7 @@ section.projects h2 {
 }
 .showcase {
     display: grid;
-    grid-template-columns: repeat(3, min-content);
+    grid-template-columns: repeat(4, min-content);
     grid-template-areas: "one two three";
     grid-template-rows: max-content;
     overflow-x: auto;
@@ -112,6 +112,14 @@ section.projects h2 {
     padding-left: 6.67%;
     padding-right: 6.67%;
     /*background-color: white;*/
+}
+.showcase button {
+    margin: 4rem 4rem;
+    margin-left: 2rem;
+    border-radius: 50%;
+    padding: 0.75rem;
+    display: grid;
+    place-items: center;
 }
 .showcase figcaption p:first-child{
     font-weight: 600;
@@ -161,12 +169,13 @@ section.cta-button h3 {
 section.cta-button {
     display: grid;
 }
-section.cta-button button {
+/*section.cta-button button {
     line-height: 1.5rem;
     font-weight: 600;
     text-transform: capitalize;
+    padding: 0.5rem 2.5rem;
     background-color: var(--accent);
     border: none;
     cursor: pointer;
-    outline: none;
+    outline: none;*/
 }
