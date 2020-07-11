@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'basier_square_monoregular';
+    src: url('fonts/basiersquaremono-regular-webfont.eot');
+    src: url('fonts/basiersquaremono-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/basiersquaremono-regular-webfont.woff2') format('woff2'),
+         url('fonts/basiersquaremono-regular-webfont.woff') format('woff'),
+         url('fonts/basiersquaremono-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
 :root {
     /*brand colors*/
     --black: #000000;
@@ -28,6 +39,7 @@
     --xxxl: 8rem;
     /*end of custom styles*/
     --default: 'Poppins', sans-serif;
+    --mono: 'basier_square_monoregular'
     box-sizing: border-box;
     
 }
