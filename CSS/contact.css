@@ -193,7 +193,7 @@ label {
 input:focus ~  label,
 textarea:focus ~  label, 
 input:valid ~  label,
-textarea:valid ~  label {
+textarea:valid ~  label, label.float {
     margin-top: 1.25rem;
     margin-bottom: auto;
     font-size: 0.75rem;
@@ -203,8 +203,24 @@ textarea:valid ~  label {
 input:focus ~ .line:last-child,
 textarea:focus ~ .line:last-child,  
 input:valid ~ .line:last-child,
-textarea:valid ~ .line:last-child{
+textarea:valid ~ .line:last-child,
+.line:last-child.focus{
     background-color: var(--accent);
+}
+.input-container > .line:last-child.warn,
+.textarea-container > .line:last-child.warn {
+    background-color: var(--warn);
+}
+.text-inputs span.error-message {
+    font-family: var(--mono), monospace;
+    font-family: monospace;
+    display: block;
+    font-size: 0.75rem;
+    grid-area: label;
+    margin-top: auto;
+    margin-bottom: 0.25rem;
+    line-height: 1rem;
+    color: var(--dim);
 }
 /*map*/
 section.map p.address {

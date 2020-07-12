@@ -148,6 +148,13 @@ svg.logo {
     width: 100%;
     height: auto;
 }
+svg.logo path {
+    fill: black;
+    transition: ease-in 300ms all;
+}
+svg.logo.white path {
+    fill: white;
+}
 /*responsive navbar*/
 div.menu-icon {
     display: grid;
@@ -167,13 +174,33 @@ div.menu-icon {
     background-color: black;
     transition: ease-in 300ms all;
 }
+.stroke.white {
+    background-color: white;
+    transition: ease-in 300ms all;
+}
+.stroke::before.white {
+    background-color: white;
+}
+.stroke::after.white {
+    background-color: white;
+}
+.no-hero svg.logo path {
+    fill: white;
+    transition: ease-in 300ms all;
+}
+.no-hero .stroke {
+    height: 2px;
+    width: 24px;
+    background-color: white;
+    transition: ease-in 300ms all;
+}
 .stroke::before, .stroke::after {
     content: "";
     position: absolute;
     display: block;
     height: 2px;
     width: 24px;
-    background-color: black;
+    background-color: inherit;
     color: white;
     transition: ease-in 300ms all;
 }
