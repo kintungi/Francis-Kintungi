@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'basier_square_monoregular';
+    src: url('fonts/basiersquaremono-regular-webfont.eot');
+    src: url('fonts/basiersquaremono-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/basiersquaremono-regular-webfont.woff2') format('woff2'),
+         url('fonts/basiersquaremono-regular-webfont.woff') format('woff'),
+         url('fonts/basiersquaremono-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
 :root {
     /*brand colors*/
     --black: #000000;
@@ -28,6 +39,7 @@
     --xxxl: 8rem;
     /*end of custom styles*/
     --default: 'Poppins', sans-serif;
+    --mono: 'basier_square_monoregular'
     box-sizing: border-box;
     
 }
@@ -69,7 +81,7 @@ nav.menu {
     color: black;
     display: grid;
     overflow: hidden;
-    transition: ease-in 500ms 0s all;
+    transition: ease-out 300ms 0s all;
     transform-origin: right center;
 }
 nav[class="menu show"] {/*Introduced a class which is used by js to expand the menu*/
@@ -119,22 +131,29 @@ nav ul.menu-list {
     margin-bottom: 10vh;
 }
 header {
-    position: fixed;
+    position: static;
     grid-area: header;
     display: grid;
     width: 100%;
 }
 div.logo {
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin: 2rem 4.44%;
     justify-self: center;
     z-index: 100;
     width: 91.12%;
     height: auto;
+    position: fixed;;
 }
 svg.logo {
     width: 100%;
     height: auto;
+}
+svg.logo path {
+    fill: black;
+    transition: ease-in 300ms all;
+}
+svg.logo.white path {
+    fill: white;
 }
 /*responsive navbar*/
 div.menu-icon {
@@ -143,13 +162,36 @@ div.menu-icon {
     height: 22px;
     width: 24px;
     cursor: pointer;
-    margin: 0 4.44% 2rem auto;
+    /* margin: 0 4.44% 2rem auto; */
+    top: 5.75rem;
+    right:  4.44%;
     z-index: 120;
+    position: fixed;
 }
 .stroke {
     height: 2px;
     width: 24px;
     background-color: black;
+    transition: ease-in 300ms all;
+}
+.stroke.white {
+    background-color: white;
+    transition: ease-in 300ms all;
+}
+.stroke::before.white {
+    background-color: white;
+}
+.stroke::after.white {
+    background-color: white;
+}
+.no-hero svg.logo path {
+    fill: white;
+    transition: ease-in 300ms all;
+}
+.no-hero .stroke {
+    height: 2px;
+    width: 24px;
+    background-color: white;
     transition: ease-in 300ms all;
 }
 .stroke::before, .stroke::after {
@@ -158,7 +200,7 @@ div.menu-icon {
     display: block;
     height: 2px;
     width: 24px;
-    background-color: black;
+    background-color: inherit;
     color: white;
     transition: ease-in 300ms all;
 }
@@ -220,6 +262,7 @@ footer {
     color: var(--dim);
     font-size: 0.875rem;
     padding: 2rem 0;
+    grid-area: footer;
 }
 footer .social-icons {
   display: grid;
@@ -245,6 +288,8 @@ button, input[type="submit"] {
     outline: none;
     color: white;
     font-size: 1rem;
+    display: grid;
+    place-items: center;
 }
 button:hover {
     opacity: 0.8;
@@ -252,4 +297,7 @@ button:hover {
 button:active {
     background-color: var(--white);
     color: black;
+}
+button:active svg > path {
+    fill: black;
 }

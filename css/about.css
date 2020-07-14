@@ -19,7 +19,7 @@ article.more-details {
 }
 article.more-details  > h5 {
     font-style: normal;
-    font-weight: 600;
+    font-weight: normal;
     font-size: 1.25rem;
     line-height: 1.75rem;
     margin: 8rem 0;
@@ -28,7 +28,6 @@ article.more-details p {
     margin-bottom: 2rem;
     font-size: 1rem;
     line-height: 1.5rem;
-    font-weight: 600;
 }
 form {
     padding: 2rem 6.67%;

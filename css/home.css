@@ -114,13 +114,40 @@ section.projects h2 {
     /*background-color: white;*/
 }
 .showcase button {
-    margin: 4rem 4rem;
-    margin-left: 2rem;
+    /* margin: 4rem 4rem; */
+    /* margin-left: 2rem; */
     border-radius: 50%;
     padding: 0.75rem;
     display: grid;
     place-items: center;
 }
+.showcase div {
+    display: grid;
+    justify-items: center;
+    width: 10rem;
+    height: 13.8125rem;
+    padding-right: 2rem;
+}
+.showcase div a {
+    height: max-content;
+    margin-top: 4rem;
+}
+.showcase div > p {
+    font-size: 1rem;
+    /* margin-top: 1rem; */
+    margin-bottom: 1.375rem;
+    line-height: 1.5rem;
+}
+/* .showcase button::after {
+    content: "Full Portfolio";
+    position: absolute;
+    display: block;
+    color: white;
+    z-index: 100;
+    font-size: 1rem;
+    font-weight: 700;
+    transform: translateY(3rem);
+} */
 .showcase figcaption p:first-child{
     font-weight: 600;
     margin-bottom: 0;
@@ -177,5 +204,5 @@ section.cta-button {
     background-color: var(--accent);
     border: none;
     cursor: pointer;
-    outline: none;*/
-}
+    outline: none;
+}*/

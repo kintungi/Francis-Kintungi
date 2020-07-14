@@ -4,6 +4,7 @@ main.case-study {
     grid-template-columns: 100%;
     grid-template-rows: max-content;
     margin-bottom: 4rem;
+    margin-top: 9.125rem;
 }
 main.case-study section[class~="gallery"] {
     grid-area: gallery;

@@ -20,6 +20,7 @@ main.portfolio {
 }
 main.portfolio article {
     padding: 4rem 6.67%;
+    margin-top: 9.125rem;
 }
 main.portfolio article > p {
     font-style: normal;
