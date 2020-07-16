@@ -225,15 +225,21 @@ getMeasurements();
 window.addEventListener("resize", getMeasurements, false);
 window.addEventListener("scroll", () => {
     let logotype = document.getElementById("logo");
-    let hamburger = document.getElementById("menu-stroke");
+    let menuStroke = document.getElementsByClassName("stroke");
     // console.log(top);
     let scrolled = amountScrolled()
-    if (scrolled >= 57) {
+    if ((hero) && (scrolled >= 57)) {
         logotype.classList.add("white");
-        hamburger.classList.add("white");
+        for (let i = 0; i < menuStroke.length; i++) {
+            menuStroke[i].classList.add("white")
+        }
+
+
     } else {
-        hamburger.classList.remove("white");
         logotype.classList.remove("white");
+        for (let i = 0; i < menuStroke.length; i++) {
+            menuStroke[i].classList.remove("white")
+        }
     }
 
 },false);

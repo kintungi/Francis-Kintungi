@@ -27,6 +27,7 @@ main.portfolio article > p {
     font-weight: normal;
     font-size: 1.75rem;
     line-height: 2.75rem;
+    max-width: 45ch
 }
 main.portfolio > section.projects {
     display: grid;
@@ -69,6 +70,8 @@ main.portfolio > section.projects {
     font-weight: normal;
     font-size: 0.875rem;
     line-height: 1.25rem;
+    max-width: 45ch;
+    
 }
 footer.no-hero {
     grid-area: footer;

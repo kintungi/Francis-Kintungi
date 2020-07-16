@@ -23,11 +23,13 @@ article.more-details  > h5 {
     font-size: 1.25rem;
     line-height: 1.75rem;
     margin: 8rem 0;
+    max-width: 45ch
 } 
 article.more-details p {
     margin-bottom: 2rem;
     font-size: 1rem;
     line-height: 1.5rem;
+    max-width: 70ch
 }
 form {
     padding: 2rem 6.67%;

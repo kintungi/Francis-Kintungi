@@ -39,6 +39,7 @@ section.foreword > p {
     font-weight: bold;
     line-height: 2.25rem;
     margin-bottom: var(--l);
+    max-width: 45ch;
 }
 section.foreword > div {
     width: max-content;
@@ -65,21 +66,45 @@ section.foreword a:hover {
 section h2 {
     margin-bottom: var(--xxl);
 }
-section.services div {
-    margin-bottom: var(--l);
+section.services div.service {
+    /* margin-bottom: var(--l); */
+    /* margin-right: 6rem; */
+    width: max-content;
+    grid-row: auto;
+}
+section.services h2 {
+    color: black;
+}
+/* div.servlist {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+} */
+div.servlist {
+    display: grid;
+    /* max-width: 100vw; */
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fit, 13.4rem);
+    grid-template-rows: max-content;
+    grid-gap: 2rem 6rem;
 }
 .servlist p {
     font-weight: bold;
     margin-bottom: 0.5rem;
     line-height: 1.5rem;
+    color: black;
 }
 section.services{
     grid-area: services;
+    background-color: white;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 
 }
 section.services li {
     list-style-type: none;
-    color: var(--lesswhite);
+    color: black;
+    /* color: var(--lesswhite); */
     height: 1.5rem;
     margin-bottom: var(--xxs);
 }
@@ -98,20 +123,26 @@ section.projects{
 section.projects h2 {
     margin-left: 6.67%;
     margin-right: 6.67%;
+    color: white;
 }
 .showcase {
     display: grid;
     grid-template-columns: repeat(4, min-content);
-    grid-template-areas: "one two three";
+    grid-template-areas: "one two three four";
     grid-template-rows: max-content;
     overflow-x: auto;
     margin-bottom: 1rem;
-    grid-column-gap: 2rem;
+    /* grid-column-gap: 2rem; */
+    grid-column-gap: 8.89vw;
     font-size: 0.875rem;
     line-height: 1.25rem;
     padding-left: 6.67%;
     padding-right: 6.67%;
     /*background-color: white;*/
+}
+.showcase img {
+    width: 61.4vw;
+    height: auto;
 }
 .showcase button {
     /* margin: 4rem 4rem; */
@@ -121,21 +152,41 @@ section.projects h2 {
     display: grid;
     place-items: center;
 }
-.showcase div {
+.showcase div.container {
+    display: grid;
+    place-items: center;
+    /* margin: auto 44.4vw auto 44.4vw; */
+    width: 44.4vw;
+    /* height: 61.4vw; */
+    /* width: 10rem; */
+    height: min-content;
+    /* height: 13.8125rem; */
+    padding-right: 8.89vw;
+    /* margin-top: auto; */
+    /* margin-bottom: auto; */
+}
+.showcase div.inner {
     display: grid;
     justify-items: center;
-    width: 10rem;
-    height: 13.8125rem;
-    padding-right: 2rem;
+    /* margin: auto 44.4vw auto 44.4vw; */
+    /* width: 44.4vw; */
+    width: min-content;
+    /* height: 61.4vw; */
+    /* width: 10rem; */
+    height: min-content;
+    /* height: 13.8125rem; */
+    /* padding-right: 2rem; */
+    margin-top: 17.8vw;
+    /* margin-bottom: auto; */
 }
 .showcase div a {
     height: max-content;
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
 }
 .showcase div > p {
     font-size: 1rem;
     /* margin-top: 1rem; */
-    margin-bottom: 1.375rem;
+    margin-top: 1.375rem;
     line-height: 1.5rem;
 }
 /* .showcase button::after {

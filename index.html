@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/home.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="css/contact.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <script defer src="script/main.js"></script>
 </head>
@@ -52,7 +53,9 @@
                 </ul>
             </nav>
             <div id="menu-button" class="menu-icon">
-                <div id="menu-stroke" class="stroke center"></div>
+                <div id="top-stroke"class="stroke top"></div>
+                <div id="center-stroke" class="stroke center"></div>
+                <div id="bottom-stroke" class="stroke bottom"></div>
             </div>
         </header>
         <main class="hero">
@@ -76,7 +79,7 @@
             <section class="services">
                 <h2>Services.</h2>
                 <div class="servlist">
-                    <div class="brand">
+                    <div class="service brand">
                         <p>Brand</p>
                         <ul>
                             <li>Logo design</li>
@@ -87,14 +90,14 @@
                             <li>Design systems</li>
                         </ul>
                     </div>
-                    <div class="xd">
+                    <div class="service xd">
                         <p>Digital experience design</p>
                         <ul>
                             <li>Websites</li>
                             <li>Mobile applications</li>
                         </ul>
                     </div>
-                    <div class="frontend">
+                    <div class="service frontend">
                         <p>Front-end engineering</p>
                         <ul>
                             <li>Wireframing/prototyping</li>
@@ -103,7 +106,7 @@
                             <li>JavaScript</li>
                         </ul>
                     </div>
-                    <div class="strategy">
+                    <div class="service strategy">
                         <p>Strategy / Consulting</p>
                         <ul>
                             <li>Brand strategy</li>
@@ -112,7 +115,7 @@
                             <li>Usability testing</li>
                         </ul>
                     </div>
-                    <div class="marketing">
+                    <div class="service marketing">
                         <p>Marketing</p>
                         <ul>
                             <li>Social media</li>
@@ -155,15 +158,17 @@
                             </p>
                         </figcaption>
                     </figure>
-                    <div>
-                        <a href="projects.html">
-                            <button class="portfolio">
-                                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path opacity="0.85" d="M22.6667 44.24L34.88 32L22.6667 19.76L26.4267 16L42.4267 32L26.4267 48L22.6667 44.24Z" fill="white"/>
-                                    </svg>                                                                       
-                            </button>
-                        </a>
-                        <p>See more</p>
+                    <div class="container">
+                        <div class="inner">
+                            <a href="projects.html">
+                                <button class="portfolio">
+                                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path opacity="0.85" d="M22.6667 44.24L34.88 32L22.6667 19.76L26.4267 16L42.4267 32L26.4267 48L22.6667 44.24Z" fill="white"/>
+                                        </svg>                                                                       
+                                </button>
+                            </a>
+                            <p>See more</p>
+                        </div>
                     </div>
                 </section><!--closing showcase-->
                 <!-- <section class="cta-button">

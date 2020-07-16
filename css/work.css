@@ -4,7 +4,7 @@ main.case-study {
     grid-template-columns: 100%;
     grid-template-rows: max-content;
     margin-bottom: 4rem;
-    margin-top: 9.125rem;
+    margin-top: 40.6vw;
 }
 main.case-study section[class~="gallery"] {
     grid-area: gallery;
@@ -29,6 +29,7 @@ article.case-study > p {
     font-weight: normal;
     font-size: 1rem;
     line-height: 1.5rem;
+    max-width: 70ch
 }
 section[class~="other-projects"] {
     grid-area: other;

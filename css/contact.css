@@ -1,12 +1,14 @@
 main article {
     padding: 4rem 6.67%;
     margin-top: 9.125rem;
+    /* margin-top: 40.6vw; */
 }
 main article > p {
     font-style: normal;
     font-weight: normal;
     font-size: 1.75rem;
     line-height: 2.75rem;
+    max-width: 45ch
 }
 section.contact {
     padding: 2rem 6.67%;

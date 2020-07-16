@@ -39,7 +39,7 @@
     --xxxl: 8rem;
     /*end of custom styles*/
     --default: 'Poppins', sans-serif;
-    --mono: 'Roboto Mono', monospace;
+    --mono: 'basier_square_monoregular'
     box-sizing: border-box;
     
 }
@@ -83,7 +83,6 @@ nav.menu {
     overflow: hidden;
     transition: ease-out 300ms 0s all;
     transform-origin: right center;
-    place-items: center;
 }
 nav[class="menu show"] {/*Introduced a class which is used by js to expand the menu*/
     width: 100%;
@@ -100,7 +99,7 @@ ul.menu-list li {
     font-weight: bold;
     font-size: 1.5rem;
     line-height: 2.25rem;
-    text-align: center;
+    text-align: right;
     margin-bottom: 2rem; 
     list-style-type: none;
     color: black;
@@ -126,10 +125,10 @@ nav svg[class~="cancel"] {
 }
 
 nav ul.menu-list {
-    /* margin-right: 17.78vw;
+    margin-right: 17.78vw;
     margin-left: auto;
     margin-top: auto;
-    margin-bottom: 10vh; */
+    margin-bottom: 10vh;
 }
 header {
     position: fixed;
