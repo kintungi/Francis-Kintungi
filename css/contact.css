@@ -214,8 +214,7 @@ textarea:valid ~ .line:last-child,
     background-color: var(--warn);
 }
 .text-inputs span.error-message {
-    font-family: var(--mono), monospace;
-    font-family: monospace;
+    font-family: var(--mono);
     display: block;
     font-size: 0.75rem;
     grid-area: label;
