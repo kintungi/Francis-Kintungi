@@ -252,7 +252,7 @@ button, input[type="submit"] {
     border: none;
     cursor: pointer;
     outline: none;
-    color: black;
+    color: white;
     font-size: 1rem;
     display: grid;
     place-items: center;
