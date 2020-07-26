@@ -239,7 +239,6 @@ footer {
     justify-items: center;
     color: var(--dim);
     font-size: 0.875rem;
-    text-transform: uppercase;
     padding: 2rem 0;
     grid-area: footer;
 }
