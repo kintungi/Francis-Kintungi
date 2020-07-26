@@ -16,7 +16,10 @@
     --dim: #808080;
     --white: #fff;
     --lesswhite: #B2B2B2;
-    --accent: #3900E6;
+    /* --accent: #1334ED; */
+    /* --accent: #3900E6; */
+    --accent: #00F7B5;
+    --darkaccent: #250094;
     --warn: red;
    /* --purple: #6600FF;*/
     --darkpurple: #00F7B5;
@@ -60,6 +63,9 @@ h2 {
 }
 p, h1, h2, h3, h4, h5, h6 {margin: 0;
 }
+.desktop {
+    display: none
+}
 div.wrapper {
     display: grid;
     grid-template-areas: "header"
@@ -77,13 +83,14 @@ nav.menu {
     height: 100vh;
     width: 0%;
     background-color: white;
-    z-index: 105;
+    z-index: 118;
     color: black;
     display: grid;
     overflow: hidden;
-    transition: ease-out 300ms 0s all;
+    transition: linear 300ms all;
     transform-origin: right center;
     place-items: center;
+    justify-content: start;
 }
 nav[class="menu show"] {/*Introduced a class which is used by js to expand the menu*/
     width: 100%;
@@ -91,16 +98,19 @@ nav[class="menu show"] {/*Introduced a class which is used by js to expand the m
 nav[class="menu show"] > rect {/*changing the color of svg*/
     fill: black;
 }
+nav ul {
+    margin-left: 8%;
+}
 nav ul, nav li {
     padding: 0;
     margin: 0;
 }
 ul.menu-list li {
     font-style: normal;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 1.5rem;
     line-height: 2.25rem;
-    text-align: center;
+    text-align: left;
     margin-bottom: 2rem; 
     list-style-type: none;
     color: black;
@@ -126,10 +136,10 @@ nav svg[class~="cancel"] {
 }
 
 nav ul.menu-list {
-    /* margin-right: 17.78vw;
-    margin-left: auto;
-    margin-top: auto;
-    margin-bottom: 10vh; */
+    /* margin-right: 17.78vw; */
+    margin-left: 8vw;
+    /* margin-top: auto; */
+    /* margin-bottom: 10vh; */
 }
 header {
     position: fixed;
@@ -137,6 +147,7 @@ header {
     display: grid;
     width: 100%;
     height: 0;
+    z-index: 300;
 }
 div.logo {
     margin: 2rem 4.44%;
@@ -145,6 +156,7 @@ div.logo {
     width: 91.12%;
     height: auto;
     /* position: fixed;; */
+    /* transition: ease-in 300ms all; */
 }
 svg.logo {
     width: 100%;
@@ -152,7 +164,7 @@ svg.logo {
 }
 svg.logo path {
     fill: black;
-    transition: ease-in 300ms all;
+    transition: ease-in 128ms all;
 }
 svg.logo.white path {
     fill: white;
@@ -227,6 +239,7 @@ footer {
     justify-items: center;
     color: var(--dim);
     font-size: 0.875rem;
+    text-transform: uppercase;
     padding: 2rem 0;
     grid-area: footer;
 }
@@ -240,10 +253,10 @@ footer .social-icons path {
     fill: var(--dim);
 }
 footer .social-icons a:hover  path {/*social icons do not change color, I have to fix this*/
-    fill: var(--accent);
+    fill: white;
 }
 /*components*/
-button, input[type="submit"] {
+button, input[type="submit"], a.button {
     line-height: 1.5rem;
     font-weight: 600;
     text-transform: capitalize;
@@ -252,18 +265,140 @@ button, input[type="submit"] {
     border: none;
     cursor: pointer;
     outline: none;
-    color: white;
+    color: black;
     font-size: 1rem;
     display: grid;
     place-items: center;
+    text-decoration: none;
+    width: max-content;
 }
-button:hover {
-    opacity: 0.8;
+button:hover,
+a.button:hover {
+    background-color: var(--darkaccent);
 }
-button:active {
+button:active,
+a.button:active {
     background-color: var(--white);
     color: black;
 }
 button:active svg > path {
     fill: black;
+}
+@media screen and (min-width: 750px) {
+    div.logo {
+        margin: 2rem 4.44%;
+        justify-self: start;
+        z-index: 300;
+        width: 360px;
+        /* width: 360px; */
+        height: auto;
+        /* position: fixed;; */
+    }
+    header.home {
+        position: static;
+        grid-area: header;
+        display: grid;
+        grid-template-areas: unset;
+        grid-template-columns: unset;
+        grid-template-rows: unset;
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        z-index: 300;
+        background-color: black;
+    }
+    div.logo.stick {
+        position: fixed;
+        top: 2rem;
+        left: 4.44%;
+        grid-area: 1 / 1 / header-end / header-end;
+        margin: 0;
+        z-index: 500;
+        width: 360px;
+        height: auto;
+        /* position: fixed;; */
+    }
+    div.logo.home {
+        grid-area: 1 / 1 / header-end / header-end;
+        margin: auto 4.44%;
+        justify-self: center;
+        align-self: center;
+        z-index: 500;
+        /* width: 91.12%; */
+        width: 80%;
+        height: auto;
+        /* position: fixed;; */
+    }
+    div.menu-icon {
+        display: grid;
+        grid-area: header;
+        grid-template-areas: "button";
+        min-height: 18px;
+        min-width: 24px;
+        cursor: pointer;
+        place-items: center;
+        /* justify-self: end;
+        align-self: start; */
+        top: 2rem;
+        right:  4.44%; 
+        margin-right: 0;
+        /* margin-left: auto;
+        margin-right: 4.44%;
+        margin-top: 0;
+        margin-bottom: auto; */
+        z-index: 120;
+        position: fixed;
+        /* background-color: blueviolet; */
+    }
+    svg.logo path {
+        fill: white;
+    }
+    .stroke {
+        background-color: white;
+    } 
+    /* nav.menu {
+        position: fixed;
+        top: 2rem;
+        right: 4.44%;
+        grid-area: header-start / header-start / auto / header-end;
+        height: max-content;
+        width: max-content;
+        background-color: transparent;
+        z-index: 105;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        transition: unset;
+        transform-origin: right center;
+        place-items: center;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+    ul.menu-list li {
+        margin-left: 64px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 1rem;
+        text-align: center;
+        margin-bottom: 2rem; 
+        list-style-type: none;
+        color: white;
+    }
+    .menu-list a:link {
+        text-decoration: none;  
+        color: white;
+    }
+    .menu-list a:active {
+        color: var(--accent);
+    }
+    .menu-list a:visited {
+        color: white;
+    }
+    .menu-list a:hover {
+        color: var(--dim);
+    } */
 }

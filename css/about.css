@@ -14,7 +14,7 @@ main > img {
     grid-area: hero;
 }
 article.more-details {
-    padding: 2rem 6.67%;
+    padding: 2rem 6.67vw;
     grid-area: article;
 }
 article.more-details  > h5 {
@@ -29,12 +29,75 @@ article.more-details p {
     margin-bottom: 2rem;
     font-size: 1rem;
     line-height: 1.5rem;
-    max-width: 70ch
+    max-width: 65ch;
+    min-width: auto;
 }
 form {
-    padding: 2rem 6.67%;
+    padding: 2rem 6.67vw;
     grid-area:form;
 }
 /*main[class~="about"] > img.hero {
     filter: saturate(0%);
 } */
+@media screen and (min-width: 750px) {
+    main[class~="about"] {
+        grid-template-areas: "hero"
+                             "article"
+                             "form";
+        grid-template-columns: 100%;
+        grid-template-rows: max-content  max-content max-content;
+        grid-gap: 2rem 0;
+        width: fit-content;
+        margin-left: 20%;
+        margin-right: 20%;
+        padding-left: 0;
+        padding-right: 0;
+        justify-content: center;
+    }
+    main > img {
+        width: 100%;
+        height: auto;
+        grid-area: hero;
+        /* margin-right: auto; */
+        /* margin-left: 6.67vw; */
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: calc(19.125rem - 8rem);
+    }
+    article.more-details  > h5 {
+        max-width: 35ch;
+        margin-top: 0;
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    article.more-details {
+    padding: 2rem 0;
+    }
+    form {
+        padding: 2rem 0;
+    }
+}
+@media screen and (min-width: 1200px) {
+    main[class~="about"] {
+        grid-template-areas: "hero article"
+                             ".. article"
+                             ".. form";
+        grid-template-columns: max-content;
+        grid-template-rows: max-content  max-content max-content;
+        grid-gap: 2rem 4rem;
+        width: fit-content;
+        margin-left: 15%;
+        margin-right: 15%;
+        padding-left: auto;
+        padding-right: auto;
+    }
+    main > img {
+        width: auto;
+        height: calc(100vh - 8rem);
+        grid-area: hero;
+        /* margin-right: auto; */
+        /* margin-left: 6.67vw; */
+        margin-right: auto;
+        margin-top: calc(19.125rem - 8rem);
+    }
+}

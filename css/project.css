@@ -21,6 +21,7 @@ main.portfolio {
 main.portfolio article {
     padding: 4rem 6.67%;
     margin-top: 9.125rem;
+    display: none;
 }
 main.portfolio article > p {
     font-style: normal;
@@ -36,6 +37,7 @@ main.portfolio > section.projects {
     grid-template-columns: 100%;
     grid-gap: 4rem 0;
     padding: 2rem 6.67%;
+    margin-top: 12rem;
 }
 .projects figure.portfolio:first-child {
     grid-area: holo;
@@ -75,4 +77,56 @@ main.portfolio > section.projects {
 }
 footer.no-hero {
     grid-area: footer;
+}
+@media screen and (min-width: 750px) {
+    main.portfolio {
+        grid-template-areas: "article" 
+                             "projects";
+        grid-template-columns: 100%;
+        grid-template-rows: max-content;
+        grid-gap: 2rem 0;
+        margin-left: 16%;
+        margin-right: 16%;
+    }
+    .projects figcaption.portfolio p:last-child {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        max-width: 45ch;
+        
+    } 
+    main.portfolio > section.projects {
+        display: grid;
+        grid-auto-flow: column dense;
+        /* grid-template-areas: "holo" "openup" "francis"; */
+        grid-template-rows:  max-content;
+        grid-template-columns: 1fr;
+        grid-gap: 4rem 5.65%;
+        padding: unset;
+    }
+}
+main.portfolio article > p {
+    font-size: 2rem;
+    line-height: 3rem;
+    max-width: 30ch;
+}
+main.portfolio article {
+    padding-left: 0;
+}
+@media screen and (min-width: 1200px) {
+    main.portfolio {
+        margin-left: 8%;
+        margin-right: 8%;
+    } 
+    main.portfolio > section.projects {
+        display: grid;
+        grid-auto-flow: column dense;
+        grid-template-areas: "holo openup" "francis ..";
+        grid-template-rows:  max-content;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4rem 5.65%;
+        padding: unset;
+        
+    }
 }

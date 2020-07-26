@@ -13,6 +13,12 @@ main[class="hero"] {
 .intro, .services, .projects, .contact, article[class~="frame"] {
     margin-bottom: var(--xl);
 }
+
+section.email,
+header .social-icons,
+div.cta {
+    display: none;
+}
 section.intro{
     grid-area: intro;
     display: grid;
@@ -20,6 +26,9 @@ section.intro{
                          "foreword";
     grid-template-columns: 100%;
     grid-template-rows: max-content;
+}
+section.intro .social-icons{
+    
 }
 img.hero{
     grid-area: hero;
@@ -33,24 +42,37 @@ section.foreword, section.services,footer, section.projects, section.contact, .f
 section.foreword {
     padding-top: 4rem;
     padding-bottom: 4rem;
+    padding-left: 6.67%;
 }
 section.foreword > p {
     font-size: 1.5rem;
     font-weight: bold;
     line-height: 2.25rem;
     margin-bottom: var(--l);
-    max-width: 45ch;
+    max-width: 30ch;
 }
-section.foreword > div {
+section.foreword a.about:link,
+section.foreword a.about:visited {
+    text-decoration: none;
+    color: inherit;
+}
+section.foreword a.about:hover {
+    text-decoration: underline;
+}
+section.foreword > div:first-child {
     width: max-content;
     display: flex;
     flex-direction: row;
     align-items: center;
+    display: none;
 }
 section.foreword > div p {
     line-height: 1.5rem;
 }
-section.foreword a {
+section.foreword > button {
+    display: unset ;
+}
+div.cta a {
     text-decoration: none;
     color: var(--lesswhite);
     font-size: var(--caption);
@@ -58,7 +80,7 @@ section.foreword a {
     padding-right: var(--xxs);
     transition: ease-in 300ms all;
 }
-section.foreword a:hover {
+div.cta a:hover {
     padding-right: var(--m);
     color: var(--white);
 }
@@ -93,6 +115,14 @@ div.servlist {
     margin-bottom: 0.5rem;
     line-height: 1.5rem;
     color: white;
+}
+.servlist p::before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 2rem;
+    background-color: var(--accent);
+    margin-bottom: 0.25rem
 }
 section.services{
     grid-area: services;
@@ -204,7 +234,7 @@ section.projects h2 {
     margin-bottom: 0;
 }
 .showcase figcaption p:last-child{
-    color: var(--lesswhite);
+    color: white;
 }
 .showcase figcaption {
     padding: 1rem 0;
@@ -247,6 +277,9 @@ section.cta-button h3 {
 section.cta-button {
     display: grid;
 }
+section.bottom-snap {
+    display: hidden;
+}
 /*section.cta-button button {
     line-height: 1.5rem;
     font-weight: 600;
@@ -257,3 +290,290 @@ section.cta-button {
     cursor: pointer;
     outline: none;
 }*/
+@media screen and (min-width: 750px) {
+    main[class="hero"] {
+        grid-area: main;
+        display: grid;
+        grid-template-areas: "intro"
+                            "services"
+                            "projects"
+                            "contact";
+        grid-template-columns: 100%;
+        grid-template-rows: max-content;
+        /* margin-top: -2rem; */
+    }
+    img.hero {
+        grid-area: hero;
+        display: unset;
+        /* position: absolute; */
+        width: 35.1vw;
+        /* width: 30rem; */
+        height: auto;
+        /* z-index: 200; */
+        /* top: 0;
+        right: 0; */
+        /* filter: saturate(0%); */
+        margin: 0 auto;
+        /* cursor: pointer; */
+        transition: linear 0.3s;
+    }
+    /* img.hero:hover {
+        filter:saturate(100%)
+    } */
+    div.menu-icon {
+        display: grid;
+        grid-template-areas: "button";
+        min-height: 18px;
+        min-width: 24px;
+        cursor: pointer;
+        place-items: center;
+        /* justify-self: end;
+        align-self: start; */
+        top: 2rem;
+        right:  4.44%; 
+        margin-right: 0;
+        /* margin-left: auto;
+        margin-right: 4.44%;
+        margin-top: 0;
+        margin-bottom: auto; */
+        z-index: 1500;
+        position: fixed;
+        /* background-color: blueviolet; */
+    }
+    section.foreword > div p {
+        line-height: 1.5rem;
+        display: none;
+    }
+    section.foreword {
+        /* height: 100vh; */
+        background-color: unset;
+        /* display: grid; */
+    } 
+    section.foreword > p {
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 1.5rem;
+        margin-bottom: var(--l);
+        margin-top: 16rem;
+        max-width: 30ch;
+        color: var(--dim);
+    }
+    section.foreword > p::before {
+        content:"UX Designer.";
+        position: relative;
+        display: block;
+        font-weight: 700;
+        font-size: 3rem;
+        width: max-content;
+        margin-bottom: 4rem;
+        z-index: 12;
+        color: white;
+        /* text-decoration: underline; */
+    }
+    section.foreword div {
+        display: none;
+    }
+    section.foreword > button {
+        display: unset ;
+        /* margin: unset; */
+    }
+    section.projects {
+        padding: 2rem 6.67%;
+        overflow-x: hidden;
+    }
+    .showcase {
+        display: grid;
+        justify-content: space-around;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "one two three";
+        grid-template-rows: max-content;
+        overflow-x: auto;
+        margin-bottom: 1rem;
+        /* grid-column-gap: 2rem; */
+        grid-column-gap: 5.47%;
+        /* grid-column-gap: 4rem; */
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        /*background-color: white;*/
+    }
+    .showcase img {
+        width: 100%;
+        height: auto;
+    }
+    .showcase div.container {
+        display: none;
+        place-items: center;
+        width: unset;
+        height: min-content;
+        padding-right: unset;
+
+       
+    }
+    section.projects h2 {
+        margin-left: unset;
+        margin-right: 6.67%;
+        color: white;
+    }
+    section.intro{
+        grid-area: intro;
+        display: grid;
+        grid-template-areas: "whitespace hero";
+        grid-template-columns: 1fr max-content;
+        grid-template-rows: max-content;
+        background-color: black;
+        height: max-content;
+    }
+    section.foreword {
+        grid-area: whitespace;
+        /* grid-area: 1 / 1/ -1 / -1; */
+        padding-top: unset;
+        padding-bottom: unset;
+        margin: auto;
+        margin-right: auto;
+        /* margin-bottom: 15.7vh; */
+        margin-bottom: auto;
+        margin-left: auto;
+        /* margin-left: 18.67vw;; */
+        width: max-content;
+        /* z-index: 300; */
+    }
+    section.foreword p {
+        margin-top: unset;
+        width: 455ch;
+    }
+    header section.email {
+        grid-area: 1 / 1 / -1 / -1;
+        display: grid;
+        place-items: center;
+        z-index: 400;
+        height: 15.1vh;
+        width: max-content;
+        margin-right: 4.44vw;
+        margin-left: auto;
+        /* margin-right: 3.67vw; */
+        margin-bottom: 0;
+        margin-top: auto;
+        /* display: none; */
+        
+    }
+    header section.email a:link, 
+    header section.email a:visited {
+        text-decoration: none;
+        color: white;
+        
+    }
+    header section.email a:hover, 
+    .bottom-snap a:hover {
+        color: var(--dim);
+        
+    }
+    header .social-icons {
+        grid-area: 1 / 1 / -1 / -1;
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 0 2rem;
+        z-index: 400;
+        width: max-content;
+        /* margin-right: 4.44vw; */
+        margin-left: 6.67vw;
+        margin-right: auto;
+        margin-top: 2rem;
+        display: none;
+        
+    }
+    header .social-icons path {
+        fill: white;
+    }
+    section.intro .social-icons svg {
+        margin-top: 0.5rem;
+    }
+    section.bottom-snap {
+        /* position: absolute; */
+        display: visible;
+        height: 15.1vh;
+        width: 30rem;
+        background-color: transparent;
+        grid-area: 1 / 1 / header-end / header-end;
+        margin: auto auto 0 3vw;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        justify-items: center;
+        align-items: center;
+        
+    }
+    section.bottom-snap ul {
+        display: flex;
+        flex-direction: row;
+        font-weight: normal;
+        font-size: 1rem;
+        /* background-color: turquoise; */
+        /* height: 100%; */
+        width: max-content;
+        padding: 0;
+    }
+    section.bottom-snap ul  li {
+        list-style-type: none;
+        margin-left: 3rem;
+    }
+    section.bottom-snap ul a:link,
+    section.bottom-snap ul a:visited {
+        text-decoration: none;
+        color: white;
+    }
+    section.bottom-snap ul  li::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: var(--accent);
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: linear 0.3s ;
+    }
+    section.bottom-snap ul a:hover  {
+        color: var(--dim);
+    }
+    section.bottom-snap ul li:hover::after {
+        background-color: var(--accent);
+        transform: scaleX(1);
+    }
+    section.bottom-snap ul  li:first-child {
+        margin-left: 0;
+    }
+    .scroll-down {
+        animation: scroll 800ms ease-out infinite both;
+    }
+    @keyframes scroll {
+        0% {
+            transform: translateY(-1rem);
+            opacity: 0;
+        }
+        50% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(1rem);
+        }
+    }
+    section.contact div.container {
+        /* padding: 2rem 6.67%; */
+        /* margin-left: 8%; */
+        margin-left: 0;
+        /* margin-right: 6.67%; */
+        /* margin-right: 16%; */
+    }
+    section.contact {
+        margin-right: 6.67%;
+        margin-left: 6.67%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    section.foreword > p::before {
+        font-size: 4rem;
+    }
+    section.foreword > p {
+        max-width: 45ch;
+    }
+}

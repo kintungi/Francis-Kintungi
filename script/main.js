@@ -207,12 +207,15 @@ function percentageScrolled() {
     console.log(trackLength)
     return pctScrolled
 };
-let winHeight, docHeight, trackLength, heroHeight, throttleScroll;
+let winHeight, docHeight, trackLength, heroHeight, throttleScroll, landingHeight;
 function getMeasurements() {
     heroHeight = hero.height;
     docHeight = getDocHeight();//height of the document ie viewport plus hidden(scrollable)
     trackLength = docHeight - winHeight;//scrollable area
     // console.log(heroHeight)
+    //below are cose retrieving the measurement of landing page
+    landingHeight = window.innerHeight;
+
 }
 function amountScrolled() {
     let scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
@@ -220,14 +223,23 @@ function amountScrolled() {
     // console.log(pctScrolled + "%");
     return pctScrolled
 }
+function landingScrolled() {
+    let scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
+    let pctScrolled = Math.floor(scrollTop/landingHeight * 100);
+    console.log(pctScrolled + "%");
+    return pctScrolled
+}
 getMeasurements();
-
+///////Logo effect on landing page
+// let trackLength, LandingHeight, throttleScroll;
 window.addEventListener("resize", getMeasurements, false);
 window.addEventListener("scroll", () => {
     let logotype = document.getElementById("logo");
     let menuStroke = document.getElementsByClassName("stroke");
+    let logoContainer = document.getElementById("logo-container");
     // console.log(top);
-    let scrolled = amountScrolled()
+    let scrolled = amountScrolled();
+    let landingPassed = landingScrolled();
     if ((hero) && (scrolled >= 57)) {
         logotype.classList.add("white");
         for (let i = 0; i < menuStroke.length; i++) {
@@ -241,5 +253,19 @@ window.addEventListener("scroll", () => {
             menuStroke[i].classList.remove("white")
         }
     }
+    if (landingPassed >= 37) {
+        logoContainer.classList.remove("home");
+        logoContainer.classList.add("stick");
+        console.log(logoContainer);
+    } else {
+        logoContainer.classList.add("home");
+        logoContainer.classList.remove("stick");
+    }
+    if ((landingPassed >= 95) && (landingPassed <= 218)) {
+        logotype.classList.add("black")
+    } else {
+        logotype.classList.remove("black")
+    }
 
 },false);
+console.log(window.innerWidth)
