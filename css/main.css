@@ -265,7 +265,7 @@ button, input[type="submit"], a.button {
     border: none;
     cursor: pointer;
     outline: none;
-    color: black;
+    color: white;
     font-size: 1rem;
     display: grid;
     place-items: center;
