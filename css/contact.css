@@ -71,7 +71,7 @@ p.mono {
     font-weight: normal;
     font-size: 0.75rem;
     line-height: 1rem;
-    color: var(--dim);
+    color: var(--accent);
     margin-bottom: 0.25rem;
 }
 div.select {
