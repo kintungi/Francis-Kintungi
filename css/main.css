@@ -17,9 +17,9 @@
     --white: #fff;
     --lesswhite: #B2B2B2;
     /* --accent: #1334ED; */
-    --accent: #3900E6;
+    /*--accent: #3900E6;*/
     /*--accent: #6333FF;*/
-    /*--accent: #00F7B5;*/
+    --accent: #orangered;
     --darkaccent: #250094;
     --warn: red;
    /* --purple: #6600FF;*/
