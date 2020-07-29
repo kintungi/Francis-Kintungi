@@ -15,8 +15,7 @@ main[class="hero"] {
 }
 
 section.email,
-header .social-icons,
-div.cta {
+header .social-icons {
     display: none;
 }
 section.intro{
@@ -26,9 +25,6 @@ section.intro{
                          "foreword";
     grid-template-columns: 100%;
     grid-template-rows: max-content;
-}
-section.intro .social-icons{
-    
 }
 img.hero{
     grid-area: hero;
@@ -68,6 +64,7 @@ section.foreword > div:first-child {
 }
 section.foreword > div p {
     line-height: 1.5rem;
+    width: max-content;
 }
 section.foreword > button {
     display: unset ;
@@ -78,7 +75,23 @@ div.cta a {
     font-size: var(--caption);
     line-height: 1.5rem;
     padding-right: var(--xxs);
-    transition: ease-in 300ms all;
+    transition: ease-in 100ms all;
+    margin-right: 1rem;
+}
+div.cta div.line {
+  height: 1px;
+  background-color: white;
+  width: 1rem;
+  display: none;
+}
+div.cta svg {
+    display: unset;
+}
+div.cta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    display: none;
 }
 div.cta a:hover {
     padding-right: var(--m);
@@ -122,7 +135,8 @@ div.servlist {
     height: 2px;
     width: 2rem;
     background-color: var(--accent);
-    margin-bottom: 0.25rem
+    margin-bottom: 0.25rem;
+    /* display: none; */
 }
 section.services{
     grid-area: services;
@@ -267,6 +281,9 @@ section.cta-button {
     padding-right: 6.67%;
     padding-left: 6.67%;
 }
+section.foreword a.button {
+    display: visible;
+}
 section.cta-button h3 {
     margin-bottom: var(--l);
     font-style: normal;
@@ -306,14 +323,16 @@ section.bottom-snap {
         grid-area: hero;
         display: unset;
         /* position: absolute; */
-        width: 35.1vw;
+        /* width: 35.1vw; */
         /* width: 30rem; */
-        height: auto;
+        width: auto;
+        height: 70vh;
         /* z-index: 200; */
         /* top: 0;
         right: 0; */
-        /* filter: saturate(0%); */
+        filter: saturate(0%);
         margin: 0 auto;
+        margin-right: 6.67vw;
         /* cursor: pointer; */
         transition: linear 0.3s;
     }
@@ -342,8 +361,9 @@ section.bottom-snap {
     }
     section.foreword > div p {
         line-height: 1.5rem;
-        display: none;
+        display: unset;
     }
+   
     section.foreword {
         /* height: 100vh; */
         background-color: unset;
@@ -371,7 +391,7 @@ section.bottom-snap {
         /* text-decoration: underline; */
     }
     section.foreword div {
-        display: none;
+        display: visible;
     }
     section.foreword > button {
         display: unset ;
@@ -423,7 +443,7 @@ section.bottom-snap {
         grid-template-columns: 1fr max-content;
         grid-template-rows: max-content;
         background-color: black;
-        height: max-content;
+        height: 80vh;
     }
     section.foreword {
         grid-area: whitespace;
@@ -450,11 +470,11 @@ section.bottom-snap {
         z-index: 400;
         height: 15.1vh;
         width: max-content;
-        margin-right: 4.44vw;
-        margin-left: auto;
+        margin-right: auto;
+        margin-left: 4.44vw;
         /* margin-right: 3.67vw; */
-        margin-bottom: 0;
-        margin-top: auto;
+        margin-bottom: auto;
+        margin-top: 0;
         /* display: none; */
         
     }
@@ -496,9 +516,9 @@ section.bottom-snap {
         width: 30rem;
         background-color: transparent;
         grid-area: 1 / 1 / header-end / header-end;
-        margin: auto auto 0 3vw;
+        margin: auto auto 0 4.44vw;
         display: grid;
-        grid-template-columns: 1fr 4fr;
+        grid-template-columns: max-content 1fr;
         justify-items: center;
         align-items: center;
         
@@ -527,16 +547,16 @@ section.bottom-snap {
         display: block;
         height: 2px;
         width: 100%;
-        background-color: var(--accent);
-        transform: scaleX(0);
+        background-color: orangered;
+        transform: scaleX(0) translateY(0.5rem);
         transform-origin: left center;
-        transition: linear 0.3s ;
+        transition: linear 0.1s ;
     }
-    section.bottom-snap ul a:hover  {
+    /* section.bottom-snap ul a:hover  {
         color: var(--dim);
-    }
+    } */
     section.bottom-snap ul li:hover::after {
-        background-color: var(--accent);
+        /* background-color: var(--accent); */
         transform: scaleX(1);
     }
     section.bottom-snap ul  li:first-child {

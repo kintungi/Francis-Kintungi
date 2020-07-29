@@ -37,7 +37,8 @@ main.portfolio > section.projects {
     grid-template-columns: 100%;
     grid-gap: 4rem 0;
     padding: 2rem 6.67%;
-    margin-top: 12rem;
+    margin-top: 40.6vw;
+    padding-top: 0;
 }
 .projects figure.portfolio:first-child {
     grid-area: holo;
@@ -89,8 +90,6 @@ footer.no-hero {
         margin-right: 16%;
     }
     .projects figcaption.portfolio p:last-child {
-        font-style: normal;
-        font-weight: normal;
         font-size: 1rem;
         line-height: 1.5rem;
         max-width: 45ch;
@@ -104,6 +103,7 @@ footer.no-hero {
         grid-template-columns: 1fr;
         grid-gap: 4rem 5.65%;
         padding: unset;
+        margin-top: 12rem;
     }
 }
 main.portfolio article > p {

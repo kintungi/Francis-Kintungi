@@ -11,8 +11,14 @@ const currentYear = new Date().getFullYear();//fetching the value of current yea
 console.log(currentYear);
 footerYear.textContent = currentYear;
 function toggleMenu() {
+    let listItems = document.querySelectorAll("ul.menu-list li");
+    for (let i = 0; i < listItems.length; i++) {
+        listItems[i].classList.toggle("open");
+    }
     menuBtn.classList.toggle("tapped");
     elNav.classList.toggle("show");
+    let navicons = document.getElementById("nav-icons");
+    navicons.classList.toggle("open")
 };
 menuBtn.addEventListener("click", toggleMenu, false);
 const closeBtn = document.getElementById("close"); //binding the svg icon that closes the navigation menu
