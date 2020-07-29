@@ -93,8 +93,8 @@ nav.menu {
     transform-origin: right center;
     place-items: center;
     justify-content: start;
-    /*clip-path: inset(0px 100vh 0px 0px);*/
-    clip-path: circle(100px at 100% -20%); 
+    clip-path: inset(0px 0px 0px 100vw);
+    /*clip-path: circle(100px at 100% -20%);*/
 }
 nav.menu .icons  {
     display: unset;
@@ -115,9 +115,9 @@ nav.menu .icons svg:hover path {
 }
 nav[class="menu show"] {/*Introduced a class which is used by js to expand the menu*/
     height: 100%;
-    /*clip-path: inset(0px 0px 0px 0px);*/
+    clip-path: inset(0px 0px 0px 0px);
     transition: ease-out 300ms all;
-    clip-path: circle(600vw at 100% -20%); 
+    /*clip-path: circle(600vw at 100% -20%);*/
 }
 nav[class="menu show"] > rect {/*changing the color of svg*/
     fill: black;
