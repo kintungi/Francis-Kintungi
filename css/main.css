@@ -293,12 +293,12 @@ div.menu-icon {
 .tapped .stroke:first-child {
     transform: rotate(45deg);
     transform-origin: center;
-    /*background-color: black;*/
+    background-color: white;
 }
 .tapped .stroke:last-child {
     transform: rotate(-45deg);
     transform-origin: center;
-    /*background-color: black;*/
+    background-color: white;
     width: 24px;
 } 
 .stroke.white {/*style to change when scroll top goes past the light background of the hero image*/
