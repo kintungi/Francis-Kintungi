@@ -83,7 +83,7 @@ nav.menu {
     grid-area: header-start / header-start / auto / header-end;
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: white;
     z-index: 500;
     color: black;
     display: grid;
@@ -111,7 +111,7 @@ nav.menu .icons svg path {
     fill: var(--dim);
 }
 nav.menu .icons svg:hover path {
-    fill: white;
+    fill: black;
 }
 nav[class="menu show"] {/*Introduced a class which is used by js to expand the menu*/
     height: 100%;
@@ -143,7 +143,7 @@ ul.menu-list li {
     margin-bottom: 3rem; 
     list-style-type: none;
     transition: linear 0.3s 0.7s;
-    color: white;
+    color: black;
     width: max-content;
     /* transform: translateY(1rem); */
     opacity: 0;
@@ -187,7 +187,7 @@ ul.menu-list  li::after {
     display: block;
     height: 4px;
     width: 100%;
-    background-color: orangered;
+    background-color: var(--accent);
     transform: scaleX(0) translateY(1.5rem);
     transform-origin: left center;
     transition: linear 0.1s ;
@@ -293,12 +293,12 @@ div.menu-icon {
 .tapped .stroke:first-child {
     transform: rotate(45deg);
     transform-origin: center;
-    background-color: white;
+    background-color: black;
 }
 .tapped .stroke:last-child {
     transform: rotate(-45deg);
     transform-origin: center;
-    background-color: white;
+    background-color: black;
     width: 24px;
 } 
 .stroke.white {/*style to change when scroll top goes past the light background of the hero image*/
