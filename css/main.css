@@ -137,10 +137,10 @@ ul.menu-list li {
     /* text-transform: uppercase; */
     font-style: normal;
     font-weight: 600;
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 3.75rem;
     text-align: left;
-    margin-bottom: 3rem; 
+    margin-bottom: 2rem; 
     list-style-type: none;
     transition: linear 0.3s 0.7s;
     color: black;
