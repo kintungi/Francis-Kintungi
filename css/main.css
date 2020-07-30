@@ -138,9 +138,9 @@ ul.menu-list li {
     font-style: normal;
     font-weight: 600;
     font-size: 2rem;
-    line-height: 3.75rem;
+    line-height: 2rem;
     text-align: left;
-    margin-bottom: 2rem; 
+    margin-bottom: 1.5rem; 
     list-style-type: none;
     transition: linear 0.1s 0.7s;
     color: black;
