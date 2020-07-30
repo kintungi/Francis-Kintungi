@@ -105,7 +105,8 @@ nav.menu .icons  {
     grid-auto-flow: row dense;
     grid-gap: 1rem;
     transition: ease-out 0.05s all;
-    transform: translateY(100vh);
+    transform: translateY(1.5rem);
+    Opacity: 0;
 }
 nav.menu .icons svg path {
     fill: var(--dim);
@@ -180,6 +181,7 @@ ul.menu-list li.open {
 nav.menu .icons.open {
     transform: translateY(0);
     transition: ease-out 0.2s all 0.6s;
+    Opacity: 1;
 }
 
 ul.menu-list  li::after {
