@@ -104,7 +104,7 @@ nav.menu .icons  {
     display: grid;
     grid-auto-flow: row dense;
     grid-gap: 1rem;
-    transition: ease-out 200ms all 0.1s;
+    transition: ease-out 100ms all 0.2s;
     transform: translateY(100vh);
 }
 nav.menu .icons svg path {
@@ -179,7 +179,7 @@ ul.menu-list li.open {
 }
 nav.menu .icons.open {
     transform: translateY(0);
-    transition: ease-out 150ms all 1s;
+    transition: ease-out 0.2s all 0.6s;
 }
 
 ul.menu-list  li::after {
