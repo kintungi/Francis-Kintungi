@@ -149,16 +149,16 @@ ul.menu-list li {
     opacity: 0;
 }
 ul.menu-list li:nth-child(1) {
-    transition: linear 0.1s 0.4s;
+    transition: linear 0.1s;
 }
 ul.menu-list li:nth-child(2) {
-    transition: linear 0.1s 0.3s;
+    transition: linear 0.1s;
 }
 ul.menu-list li:nth-child(3) {
-    transition: linear 0.1s 0.2s;
+    transition: linear 0.1s;
 }
 ul.menu-list li:nth-child(4) {
-    transition: linear 0.1s 0.1s;
+    transition: linear 0.1s;
 }
 /*not related*/
 ul.menu-list li:nth-child(1).open {
