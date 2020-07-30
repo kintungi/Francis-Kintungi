@@ -52,7 +52,8 @@ section.contact a:hover {
     flex-direction: row;
     align-items: baseline;
 }
-.status-button  p.status {
+.status-button  p.status,
+section.contact p.status {
     font-family: var(--mono);
     font-style: normal;
     font-weight: normal;
