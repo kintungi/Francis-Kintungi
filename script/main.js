@@ -39,6 +39,9 @@ function selectItem(e) {
     const selected = target.textContent;
    if (target.className === "list-item"){ inquiry.textContent = selected;
     inquiryLine.classList.remove("warn");
+    if (formStatus.textContent === "Select inquiry") {
+        formStatus.textContent = "";
+    }
     toggleDropdown();
 }
 }
@@ -147,6 +150,7 @@ function sendData(e) {
                     isFormValid = true;
                 }else if (inquiry.textContent === "Select inquiry"){
                     inquiryLine.classList.add("warn");
+                    formStatus.textContent = "Select inquiry";
                 } 
         };//end of loop
       
@@ -167,11 +171,16 @@ xhr.send(JSON.stringify(formData));
 xhr.onload = function(){
             if (xhr.status === 200) {
                 elForm.reset();
-                formStatus.textContent = "Thank you, submission successful! ";
+                // elForm.preventDefault();
+                formStatus.textContent = "Submitted!";
+                // let button = document.getElementById("sendbutton");
+                // elForm.preventDefault();
+                // button.classList.add("grey");
+                // elForm.removeEventListener("submit");
             } else {
                 console.log("error");
                 console.log(xhr.status);
-                formStatus.textContent = "Oops! there was a problem";
+                formStatus.textContent = "Problem occured";
             };
         };
 

@@ -17,7 +17,7 @@
     --white: #fff;
     --lesswhite: #B2B2B2;
     /* --accent: #1334ED; */
-    --accent: #0D12FC;
+    --accent: #3900E6;
     /* --accent: orangered; */
     --darkaccent: #250094;
     --warn: red;
@@ -354,6 +354,17 @@ button, input[type="submit"], a.button {
     place-items: center;
     text-decoration: none;
     width: max-content;
+}
+button.grey , 
+input[type="submit"].grey,
+a.button.grey,
+button.grey:hover,
+a.button.grey:hover,
+button.grey:active,
+a.button.grey:active {
+    background-color: grey;
+    cursor: unset;
+    
 }
 button:hover,
 a.button:hover {

@@ -47,6 +47,19 @@ section.contact a:link {
 section.contact a:hover {
     color: var(--dim);
 }
+.status-button {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.status-button  p.status {
+    font-family: var(--mono);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    margin-left: 4rem;
+}
 .select > p {
     font-size: 1.5rem;
     line-height: 2.25rem;
@@ -71,7 +84,7 @@ p.mono {
     font-weight: normal;
     font-size: 0.75rem;
     line-height: 1rem;
-    color: orange;
+    color: orangered;
     /* color: var(--dim); */
     margin-bottom: 0.25rem;
 }
