@@ -89,7 +89,7 @@ nav.menu {
     display: grid;
     grid-template-columns: 1fr;
     overflow: hidden;
-    transition: ease-out 300ms all 0.6s;
+    transition: ease-out 300ms all;
     transform-origin: right center;
     place-items: center;
     justify-content: start;
