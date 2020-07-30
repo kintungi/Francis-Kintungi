@@ -162,16 +162,16 @@ ul.menu-list li:nth-child(4) {
 }
 /*not related*/
 ul.menu-list li:nth-child(1).open {
-    transition: linear 0.1s 0.6s;
+    transition: linear 0.2s 0.6s;
 }
 ul.menu-list li:nth-child(2).open {
-    transition: linear 0.1s 0.6s;
+    transition: linear 0.2s 0.6s;
 }
 ul.menu-list li:nth-child(3).open {
-    transition: linear 0.1s 0.6s;
+    transition: linear 0.2s 0.6s;
 }
 ul.menu-list li:nth-child(4).open {
-    transition: linear 0.1s 0.6s;
+    transition: linear 0.2s 0.6s;
 }
 ul.menu-list li.open {
     transform: translateY(0);
