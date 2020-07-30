@@ -145,7 +145,7 @@ ul.menu-list li {
     transition: linear 0.1s 0.7s;
     color: black;
     width: max-content;
-    /* transform: translateY(1rem); */
+    transform: translateY(1.5rem); 
     opacity: 0;
 }
 ul.menu-list li:nth-child(1) {
@@ -165,13 +165,13 @@ ul.menu-list li:nth-child(1).open {
     transition: linear 0.1s 0.6s;
 }
 ul.menu-list li:nth-child(2).open {
-    transition: linear 0.1s 0.7s;
+    transition: linear 0.1s 0.6s;
 }
 ul.menu-list li:nth-child(3).open {
-    transition: linear 0.1s 0.8s;
+    transition: linear 0.1s 0.6s;
 }
 ul.menu-list li:nth-child(4).open {
-    transition: linear 0.1s 0.9s;
+    transition: linear 0.1s 0.6s;
 }
 ul.menu-list li.open {
     /* transform: translateY(0); */
