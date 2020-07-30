@@ -323,16 +323,16 @@ section.bottom-snap {
         grid-area: hero;
         display: unset;
         /* position: absolute; */
-        /* width: 35.1vw; */
+        width: 35.1vw;
         /* width: 30rem; */
-        width: auto;
-        height: 70vh;
+        /* width: auto; */
+        height: auto;
         /* z-index: 200; */
         /* top: 0;
         right: 0; */
         filter: saturate(0%);
         margin: 0 auto;
-        margin-right: 6.67vw;
+        margin-right: 0;
         /* cursor: pointer; */
         transition: linear 0.3s;
     }
@@ -595,5 +595,10 @@ section.bottom-snap {
     }
     section.foreword > p {
         max-width: 45ch;
+    }
+    img.hero {
+        width: auto;
+        height: 70vh;
+        margin-right: 6.67vw;
     }
 }
