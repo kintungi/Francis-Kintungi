@@ -249,7 +249,7 @@ textarea:valid ~ .line:last-child,
     margin-top: auto;
     margin-bottom: 0.25rem;
     line-height: 1rem;
-    color: var(--dim);
+    color: var(--accent);
 }
 /*map*/
 section.map p.address {
