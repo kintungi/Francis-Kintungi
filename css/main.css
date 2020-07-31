@@ -17,8 +17,8 @@
     --white: #fff;
     --lesswhite: #B2B2B2;
     /* --accent: #1334ED; */
-    --accent: #3900E6;
-    /* --accent: orangered; */
+    /*--accent: #3900E6;*/
+     --accent: orangered;
     --darkaccent: #250094;
     --warn: red;
    /* --purple: #6600FF;*/
@@ -348,7 +348,7 @@ button, input[type="submit"], a.button {
     border: none;
     cursor: pointer;
     outline: none;
-    color: white;
+    color: black;
     font-size: 1rem;
     display: grid;
     place-items: center;
