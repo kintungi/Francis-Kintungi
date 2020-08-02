@@ -18,7 +18,9 @@ function toggleMenu() {
     menuBtn.classList.toggle("tapped");
     elNav.classList.toggle("show");
     let navicons = document.getElementById("nav-icons");
-    navicons.classList.toggle("open")
+    navicons.classList.toggle("open");
+    Let calendly = document.getElementById("calendly");
+    calendly.classList.toggle("open");
 };
 menuBtn.addEventListener("click", toggleMenu, false);
 const closeBtn = document.getElementById("close"); //binding the svg icon that closes the navigation menu
