@@ -218,7 +218,7 @@ label {
     font-size: 1rem;
     line-height: 1.5rem;
     cursor: text;
-    transition: ease-in 300ms all;
+    transition: ease-in 200ms all;
 }
 input:focus ~  label,
 textarea:focus ~  label, 
