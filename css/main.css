@@ -137,6 +137,11 @@ nav .calendly {
     transform: translateY(1.5rem);
     Opacity: 0;
 }
+nav .calendly.open {
+    transform: translateY(0);
+    transition: ease-out 0.2s all 0.6s;
+    Opacity: 1;
+}
 nav .calendly a:link,
 nav .calendly a:visited {
     text-decoration: none;
