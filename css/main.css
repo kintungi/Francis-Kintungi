@@ -145,6 +145,7 @@ nav .calendly.open {
 nav .calendly a:link,
 nav .calendly a:visited {
     text-decoration: none;
+    text-transform: capitalize;
     Color: var(--dim);
 }
 nav ul, nav li {
