@@ -103,7 +103,7 @@ nav.menu .icons  {
     margin-right: 4.44vw;;
     grid-area: 1 / 1 / end / end;
     display: grid;
-    grid-auto-flow: row dense;
+    grid-auto-flow: column dense;
     grid-gap: 1rem;
     transition: ease-out 0.05s all;
     transform: translateY(1.5rem);
