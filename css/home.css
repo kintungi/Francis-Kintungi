@@ -92,7 +92,7 @@ div.cta {
     display: flex;
     flex-direction: row;
     align-items: center;
-    display: none;
+    */display: none;*/
 }
 div.cta a:hover {
     padding-right: var(--m);
