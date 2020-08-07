@@ -69,7 +69,8 @@ section.foreword > div p {
 section.foreword > button {
     display: unset ;
 }
-div.cta a {
+div.cta a:link,
+div.cta a:visited {
     text-decoration: none;
     color: var(--accent);
     font-size: var(--caption);
@@ -79,6 +80,9 @@ div.cta a {
     margin-right: 1rem;
     text-transform: uppercase;
     font-weight: 600;
+}
+div.cta a:active {
+    color: white; 
 }
 div.cta div.line {
   height: 1px;
