@@ -290,7 +290,7 @@ div.menu-icon {
     /* background-color: blueviolet; */
 }
 .stroke {
-    height: 4px;
+    height: 2px;
     width: 24px;
     background-color: black;
     transition: ease-in 300ms all;
