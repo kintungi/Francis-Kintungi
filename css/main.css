@@ -374,7 +374,6 @@ button, input[type="submit"], a.button {
     place-items: center;
     text-decoration: none;
     width: max-content;
-    border-radius:50%;
 }
 button.grey , 
 input[type="submit"].grey,
