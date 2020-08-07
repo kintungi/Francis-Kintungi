@@ -71,12 +71,13 @@ section.foreword > button {
 }
 div.cta a {
     text-decoration: none;
-    color: var(--lesswhite);
+    color: var(--accent);
     font-size: var(--caption);
     line-height: 1.5rem;
     padding-right: var(--xxs);
     transition: ease-in 100ms all;
     margin-right: 1rem;
+    text-transform: uppercase;
 }
 div.cta div.line {
   height: 1px;
@@ -85,7 +86,7 @@ div.cta div.line {
   display: none;
 }
 div.cta svg {
-    display: unset;
+    display: none;
 }
 div.cta {
     display: flex;
@@ -282,7 +283,7 @@ section.cta-button {
     padding-left: 6.67%;
 }
 section.foreword a.button {
-    display: visible;
+    display: none;
 }
 section.cta-button h3 {
     margin-bottom: var(--l);
