@@ -84,7 +84,7 @@ nav.menu {
     grid-area: header-start / header-start / auto / header-end;
     height: 100%;
     width: 100%;
-    background-color: var(--accent);
+    background-color: white;
     z-index: 500;
     color: black;
     display: grid;
