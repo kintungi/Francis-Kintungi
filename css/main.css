@@ -146,8 +146,10 @@ nav .calendly a:link,
 nav .calendly a:visited {
     text-decoration: none;
     /*text-transform: capitalize;*/
-    Color: var(--dim);
+    Color: var(--accent);
     font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 nav ul, nav li {
     padding: 0;
