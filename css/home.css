@@ -78,6 +78,7 @@ div.cta a {
     transition: ease-in 100ms all;
     margin-right: 1rem;
     text-transform: uppercase;
+    font-weight: 500;
 }
 div.cta div.line {
   height: 1px;
