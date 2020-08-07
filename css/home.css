@@ -101,7 +101,7 @@ div.cta {
 }
 div.cta a:hover {
     padding-right: var(--m);
-    color: var(--white);
+    color: var(--accent);
 }
 /*Services section*/
 section h2 {
