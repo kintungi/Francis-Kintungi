@@ -49,7 +49,7 @@
     
 }
 body {
-    background-color: #0D0401;
+    background-color: var(--black);
     color: var(--white);
     width: 100%;
     margin: 0;
