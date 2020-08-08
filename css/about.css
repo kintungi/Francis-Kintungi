@@ -22,7 +22,7 @@ article.more-details  > h5 {
     font-weight: normal;
     font-size: 1.25rem;
     line-height: 1.75rem;
-    margin: 8rem 0;
+    margin: 0 0 8rem 0;
     max-width: 45ch
 } 
 article.more-details p {
