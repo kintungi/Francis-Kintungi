@@ -1,5 +1,5 @@
+const preloader = document.getElementById("loader");
 const elNav = document.getElementById("nav"); //binding the navigation menu
-const preloader = document.getElementById("preloader");
 const elBody = document.getElementById("page");
 const menuBtn = document.getElementById("menu-button");
 const inquiryList = document.getElementById("options");
@@ -11,7 +11,7 @@ console.log(footerYear);
 const currentYear = new Date().getFullYear();//fetching the value of current year from the date object
 console.log(currentYear);
 footerYear.textContent = currentYear;
-Window.addEventListener("load",() => {preloader.style.display = "none"});
+window.addEventListener("load",() => {preloader.style.display = "none"});
 function toggleMenu() {
     let listItems = document.querySelectorAll("ul.menu-list li");
     for (let i = 0; i < listItems.length; i++) {
