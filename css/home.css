@@ -169,6 +169,7 @@ section.projects{
     grid-area: projects;
     padding-right: 0;
     padding-left: 0; 
+    Border-bottom: 1px solid var(--accent);
 }
 section.projects h2 {
     margin-left: 6.67%;
