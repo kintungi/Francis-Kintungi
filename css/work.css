@@ -32,7 +32,7 @@ article.case-study  p {
     font-weight: normal;
     font-size: 1rem;
     line-height: 1.5rem;
-    max-width: 70ch
+    max-width: 70ch;
     color: var(--dim);
 }
 article.case-study > p:first-child {
