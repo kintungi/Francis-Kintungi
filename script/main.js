@@ -11,7 +11,7 @@ console.log(footerYear);
 const currentYear = new Date().getFullYear();//fetching the value of current year from the date object
 console.log(currentYear);
 footerYear.textContent = currentYear;
-window.addEventListener("load",() => {preloader.style.display = "none"});
+window.addEventListener("load",() => {preloader.classList.add = "remove"});
 function toggleMenu() {
     let listItems = document.querySelectorAll("ul.menu-list li");
     for (let i = 0; i < listItems.length; i++) {
