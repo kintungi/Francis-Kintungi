@@ -141,7 +141,7 @@ nav.menu {
 nav.menu .icons  {
     display: unset;
     margin: auto 4.44% 2rem auto;
-    margin-right: 8vw;
+    margin-right: 4.44vw;
     grid-area: 1 / 1 / end / end;
     display: grid;
     grid-auto-flow: column dense;
@@ -176,20 +176,22 @@ nav .calendly {
     Margin: auto auto 2rem 8%;
     transition: ease-out 0.05s all;
     transform: translateY(1.5rem);
-    Opacity: 0;
+    opacity: 0;
+    width: max-content;
 }
 nav .calendly.open {
     transform: translateY(0);
     transition: ease-out 0.2s all 0.6s;
-    Opacity: 1;
+    opacity: 1;
 }
 nav .calendly a:link,
 nav .calendly a:visited {
     text-decoration: none;
     /*text-transform: capitalize;*/
-    Color: var(--dim);
+    color: var(--dim);
     font-size: 1rem;
     font-weight: 500;
+    width: max-content;
 }
 nav ul, nav li {
     padding: 0;
