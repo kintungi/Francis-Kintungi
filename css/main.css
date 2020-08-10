@@ -91,7 +91,7 @@ div.wrapper {
     transition: 0.2s linear;
     clip-path: inset(0px 0px 0px 0px);
 }
-.loader-container.remove {
+div[class="loader-container remove"] {
     clip-path: inset(100vh 0px 0px 0px);
 }
 .loader{
