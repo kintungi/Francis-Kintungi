@@ -89,9 +89,9 @@ div.wrapper {
     justify-content: center;
     z-index: 1000;
     transition: 0.2s linear;
-    clip-path: inset(100vh 0px 0px 0px);
+    clip-path: inset(0px 0px 0px 0px);
 }
-div[class="loader-container remove"] {
+div[class="loader-container shrink"] {
     clip-path: inset(100vh 0px 0px 0px);
 }
 .loader{
