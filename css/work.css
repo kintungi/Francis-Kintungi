@@ -80,7 +80,8 @@ figure.other p:last-child {
     font-style: normal;
     font-weight: normal;
     font-size: 0.75rem;
-    line-height: 1rem;   
+    line-height: 1rem;  
+    color: var(--dim); 
 }
 @media screen and (min-width: 750px) {
     main.case-study {
