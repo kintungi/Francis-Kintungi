@@ -153,8 +153,7 @@ section.services{
 }
 section.services li {
     list-style-type: none;
-    color: white;
-    /* color: var(--lesswhite); */
+    color: var(--dim);
     height: 1.5rem;
     margin-bottom: var(--xxs);
 }
