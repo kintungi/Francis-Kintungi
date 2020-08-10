@@ -252,6 +252,7 @@ section.projects h2 {
 .showcase figcaption p:first-child{
     font-weight: 600;
     margin-bottom: 0;
+    background-color: #111;
 }
 .showcase figcaption p:last-child{
     color: white;
