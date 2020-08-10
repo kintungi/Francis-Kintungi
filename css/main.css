@@ -89,8 +89,11 @@ div.wrapper {
     justify-content: center;
     z-index: 1000;
     transition: 0.2s linear;
+    clip-path: inset(0px 0px 0px 0px);
 }
-
+.loader-container.remove {
+    clip-path: inset(100vh 0px 0px 0px);
+}
 .loader{
     width: 50px;
     height: 50px;
