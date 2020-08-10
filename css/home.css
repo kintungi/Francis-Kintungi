@@ -130,7 +130,7 @@ div.servlist {
     grid-gap: 2rem 6rem;
 }
 .servlist p {
-    font-weight: bold;
+    font-weight: 500;
     margin-bottom: 0.5rem;
     line-height: 1.5rem;
     color: white;
