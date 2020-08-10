@@ -254,7 +254,7 @@ section.projects h2 {
     margin-bottom: 0;
 }
 .showcase figcaption p:last-child{
-    color: white;
+    color: var(-dim);
 }
 .showcase figcaption {
     padding: 1rem 0;
