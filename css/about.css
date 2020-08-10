@@ -19,7 +19,7 @@ article.more-details {
 }
 article.more-details  > h5 {
     font-style: normal;
-    font-weight: normal;
+    font-weight: 500;
     font-size: 1.25rem;
     line-height: 1.75rem;
     margin: 0 0 8rem 0;
