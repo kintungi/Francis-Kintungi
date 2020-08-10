@@ -31,6 +31,7 @@ article.more-details p {
     line-height: 1.5rem;
     max-width: 65ch;
     min-width: auto;
+    color: var(--dim);
 }
 form {
     padding: 2rem 6.67vw;
