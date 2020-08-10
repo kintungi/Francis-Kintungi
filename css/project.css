@@ -74,6 +74,7 @@ main.portfolio > section.projects {
     font-size: 0.875rem;
     line-height: 1.25rem;
     max-width: 45ch;
+    color: var(--dim);
     
 }
 footer.no-hero {
