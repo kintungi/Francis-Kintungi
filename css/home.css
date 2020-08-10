@@ -42,7 +42,7 @@ section.foreword {
 }
 section.foreword > p {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 600;
     line-height: 2.25rem;
     margin-bottom: var(--l);
     max-width: 30ch;
