@@ -257,9 +257,9 @@ section.projects h2 {
     color: white;
 }
 .showcase figcaption {
-    padding: 1rem;
-    background-color: #222;
-    display: none;
+    padding: 1rem 0;
+    /*background-color: #222;
+    display: none;*/
 }
 figure.cards {
     margin:0;
